@@ -1,5 +1,5 @@
 is_global = true
-build_property.RootNamespace = FlavorPack
-build_property.ProjectDir = C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\rimworld_flavor_pack\.vscode\
+build_property.RootNamespace = ExtraGenes
+build_property.ProjectDir = C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\rimworld_extra_genes\.vscode\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

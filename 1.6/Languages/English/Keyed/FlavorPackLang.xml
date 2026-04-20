@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<LanguageData>
-    <OO.enablePsylinkRemoval>Enable psychic lobotomy operation</OO.enablePsylinkRemoval>
-    <OO.enablePsylinkRemovalTooltip>Enable psychic lobotomy operation</OO.enablePsylinkRemovalTooltip>
-    <OO.enablePsylinkRemovalExplanation>If true, there will be an option to remove the psylink from a person. The operation will cause brain damage.</OO.enablePsylinkRemovalExplanation>
-    
-    <OOFlavorPack>OceanicOxen's Flavor Pack</OOFlavorPack>
-</LanguageData>

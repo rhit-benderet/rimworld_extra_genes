@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<packageId>OceanicOxen.FlavorPack</packageId>
-	<name>OceanicOxen's Flavor Pack</name>
+	<packageId>OceanicOxen.ExtraGenes</packageId>
+	<name>Extra Genes</name>
 	<author>OceanicOxen</author>
 	<supportedVersions>
     	<li>1.6</li>
@@ -28,5 +28,5 @@
 		<!-- <li>username.modname</li> -->
 	</incompatibleWith>
 
-	<description>Used as a mod where I can dump a bunch of small features I want for colony lore purposes.</description>
+	<description>Adds extra genes and xenotypes to the game</description>
 </ModMetaData>

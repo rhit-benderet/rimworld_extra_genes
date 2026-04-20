@@ -3,7 +3,7 @@
 	<v1.6>
 		<li>/</li>
 		<li>1.6</li>
-		<li IfModActiveAll="Ludeon.RimWorld.Anomaly,Ludeon.RimWorld.Royalty">1.6/PsylinkSkipAbduction</li>
-		<li IfModActive="Ludeon.RimWorld.Royalty">1.6/Royalty</li>
+		<!-- <li IfModActiveAll="Ludeon.RimWorld.Anomaly,Ludeon.RimWorld.Royalty">1.6/PsylinkSkipAbduction</li>
+		<li IfModActive="Ludeon.RimWorld.Royalty">1.6/Royalty</li> -->
 	</v1.6>
 </loadFolders>

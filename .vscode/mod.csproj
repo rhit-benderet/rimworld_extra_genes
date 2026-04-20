@@ -5,8 +5,8 @@
 		<PlatformTarget>x64</PlatformTarget>
 
 		<!-- Modify [RootNamespace], [AssemblyName], [OutputPath], [VersionPrefix] -->
-		<RootNamespace>FlavorPack</RootNamespace>
-		<AssemblyName>OceanicOxen.FlavorPack</AssemblyName>
+		<RootNamespace>ExtraGenes</RootNamespace>
+		<AssemblyName>ExtraGenes</AssemblyName>
 		<OutputPath>../1.6/Assemblies</OutputPath>
 		<VersionPrefix>0.1.0.0</VersionPrefix>
 
@@ -34,12 +34,12 @@
 			<Private>False</Private>
 		</Reference>
 		<!-- *Uncomment for VEF*-->
-		<Reference Include="../../../../../../steamapps/workshop/content/294100/2023507013/1.6/Assemblies/VEF.dll">
+		<!-- <Reference Include="../../../../../../steamapps/workshop/content/294100/2023507013/1.6/Assemblies/VEF.dll">
 			<Private>False</Private>
 		</Reference>
-		<!-- *Uncomment for VPE*-->
+		*Uncomment for VPE*
 		<Reference Include="../../../../../../steamapps/workshop/content/294100/2842502659/1.6/Assemblies/VanillaPsycastsExpanded.dll">
 			<Private>False</Private>
-		</Reference>
+		</Reference> -->
 	</ItemGroup>
 </Project>
