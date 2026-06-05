@@ -1,5 +1,8 @@
 is_global = true
-build_property.RootNamespace = ExtraGenes
-build_property.ProjectDir = C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\rimworld_extra_genes\.vscode\
+build_property.RootNamespace = PhoenixLords
+build_property.ProjectDir = C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\rimworld_phoenix_lords\.vscode\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 
