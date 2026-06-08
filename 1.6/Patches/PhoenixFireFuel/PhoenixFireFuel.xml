@@ -1,0 +1,19 @@
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="Chemfuel"]/comps</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Chemfuel"]/comps</xpath>
+      <value>
+        <comps />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Chemfuel"]/comps</xpath>
+    <value>
+      <li Class="OOPhoenixLords.CompProperties_PhoenixFireFuel">
+        <refillAmount>0.01</refillAmount>
+      </li>
+    </value>
+  </Operation>
+</Patch>

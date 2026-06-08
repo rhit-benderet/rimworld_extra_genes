@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <GeneDef>
+    <defName>OOPhoenixLords_PhoenixFire</defName>
+    <label>phoenix fire</label>
+    <description>Archites distributed in the blood burn chemfuel into bright phoenix flames inside the carrier. The carrier can utilize these flames to power abilities, items, and buildings which require phoenix flames.</description>
+    <geneClass>OOPhoenixLords.Gene_PhoenixFire</geneClass>
+    <iconPath>UI/Icons/Genes/Gene_PhoenixFire</iconPath>
+    <displayCategory>Archite</displayCategory>
+    <marketValueFactor>3</marketValueFactor>
+    <biostatCpx>3</biostatCpx>
+    <biostatArc>2</biostatArc>
+    <customEffectDescriptions>
+      <li>Allows a pawn to utilize genes, items, or buildings that require phoenix flames.</li>
+    </customEffectDescriptions>
+    <resourceGizmoType>OOPhoenixLords.GeneGizmo_ResourceChemfuel</resourceGizmoType>
+    <resourceLabel>chemfuel</resourceLabel>
+    <resourceGizmoThresholds>
+      <li>0.25</li>
+      <li>0.5</li>
+      <li>0.75</li>
+    </resourceGizmoThresholds>
+    <resourceLossPerDay>0.02</resourceLossPerDay>
+    <biostatMet>-3</biostatMet>
+    
+  </GeneDef>
+
+</Defs>

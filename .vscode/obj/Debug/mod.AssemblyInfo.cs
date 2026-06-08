@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PhoenixLords")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0.0+93e42f5a664f991ac4a249dc26f4cfd2084ebde8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0.0+375e9815d2017eb0c570052eb95f5ec0110a1918")]
 [assembly: System.Reflection.AssemblyProductAttribute("PhoenixLords")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PhoenixLords")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.1.0.0")]

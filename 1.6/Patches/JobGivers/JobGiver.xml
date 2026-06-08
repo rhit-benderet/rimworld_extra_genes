@@ -1,0 +1,8 @@
+<Patch>
+  <Operation Class="PatchOperationInsert">
+    <xpath>//li[@Class="JobGiver_GetHemogen"]</xpath>
+    <value>
+      <li Class="OOPhoenixLords.JobGiver_GetChemfuel" />
+    </value>
+  </Operation>
+</Patch>
