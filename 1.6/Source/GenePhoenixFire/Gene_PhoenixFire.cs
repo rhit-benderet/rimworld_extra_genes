@@ -7,6 +7,21 @@ namespace OOPhoenixLords
 {
 	public class Gene_PhoenixFire : Gene_Resource, IGeneResourceDrain
 	{
+		public virtual int ValueSecondaryForDisplay => PostProcessValue(phoenixFlameCur);
+
+    	public virtual int MaxSecondaryForDisplay => PostProcessValue(phoenixFlameMax);
+		public virtual float ValueSecondaryPercent
+		{
+			get
+			{
+				return phoenixFlameCur / phoenixFlameMax;
+			}
+			set
+			{
+				phoenixFlameCur = phoenixFlameMax * value;
+			}
+		}
+
 		public Gene_Resource Resource
 		{
 			get
@@ -74,7 +89,7 @@ namespace OOPhoenixLords
 		{
 			get
 			{
-				return new ColorInt(138, 138, 3).ToColor;
+				return new ColorInt(207, 112, 13).ToColor;
 			}
 		}
 
@@ -82,14 +97,47 @@ namespace OOPhoenixLords
 		{
 			get
 			{
-				return new ColorInt(145, 145, 42).ToColor;
+				return new ColorInt(250, 137, 20).ToColor;
+			}
+		}
+		protected Color BarSecondaryColor
+		{
+			get
+			{
+				return new ColorInt(255, 69, 0).ToColor;
 			}
 		}
 
+		protected Color BarSecondaryHighlightColor
+		{
+			get
+			{
+				return new ColorInt(255, 91, 31).ToColor;
+			}
+		}
 		public override void TickInterval(int delta)
 		{
 			base.TickInterval(delta);
-			GeneResourceDrainUtility.TickResourceDrainInterval(this, delta);
+			PhoenixFireUtil.TickResourceDrainInterval(this, pawn, delta);
+			if (this.Value > 0.0f)
+			{
+				this.ticksWithFuel += delta;
+			} else
+			{
+				this.ticksWithFuel = 0;
+			}
+		}
+		
+		public virtual float ValueSecondary
+		{
+			get
+			{
+				return phoenixFlameCur;
+			}
+			set
+			{
+				phoenixFlameCur = Mathf.Clamp(value, 0f, phoenixFlameMax);
+			}
 		}
 
 		public override void SetTargetValuePct(float val)
@@ -110,11 +158,34 @@ namespace OOPhoenixLords
 			{
 				yield return gizmo;
 			}
+			if (gizmo_secondary == null)
+			{
+				gizmo_secondary = new GeneGizmo_ResourcePhoenixFlames(this, BarSecondaryColor, BarSecondaryHighlightColor);
+			}
+
+			if ((Find.Selector.SelectedPawns.Count == 1 || def.showGizmoOnMultiSelect) && (!pawn.Drafted || def.showGizmoWhenDrafted))
+			{
+				yield return gizmo_secondary;
+			}
 			foreach (Gizmo gizmo2 in GeneResourceDrainUtility.GetResourceDrainGizmos(this))
 			{
 				yield return gizmo2;
 			}
+
 			yield break;
+		}
+		[Unsaved(false)]
+		protected GeneGizmo_SecondaryResource gizmo_secondary;
+		public void SetFireMax(float newMax)
+		{
+			phoenixFlameMax = newMax;
+			phoenixFlameCur = Mathf.Clamp(phoenixFlameCur, 0f, phoenixFlameMax);
+		}
+		public float InitialFlameMax = 1.0f;
+		public void ResetFireMax()
+		{
+			phoenixFlameMax = InitialFlameMax;
+			phoenixFlameCur = Mathf.Clamp(phoenixFlameCur, 0f, phoenixFlameMax);
 		}
 		public void Refuel(Thing thing, int numTaken)
 		{
@@ -128,8 +199,24 @@ namespace OOPhoenixLords
 		{
 			base.ExposeData();
 			Scribe_Values.Look<bool>(ref this.chemfuelAllowed, "chemfuelAllowed", true, false);
+			Scribe_Values.Look(ref phoenixFlameCur, "phoenixFlameCur", 0f);
+			Scribe_Values.Look(ref phoenixFlameMax, "phoenixFlameMax", 0f);
+			Scribe_Values.Look(ref ticksWithFuel, "ticksWithFuel", 0);
+		}
+		public override void Reset()
+		{
+			phoenixFlameCur = 0;
+			phoenixFlameMax = InitialFlameMax;
+			base.Reset();
 		}
 		public bool chemfuelAllowed = true;
+		public float phoenixFlameMax;
+		public int ticksWithFuel;
+		public float phoenixFlameCur;
 
+		public virtual float PostProcessValuePrecise(float value)
+		{
+			return (float)Mathf.RoundToInt(value * 10000f) / 100f;
+		}
 	}
 }

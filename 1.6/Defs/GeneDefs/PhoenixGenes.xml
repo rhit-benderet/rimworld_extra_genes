@@ -4,7 +4,7 @@
   <GeneDef>
     <defName>OOPhoenixLords_PhoenixFire</defName>
     <label>phoenix fire</label>
-    <description>Archites distributed in the blood burn chemfuel into bright phoenix flames inside the carrier. The carrier can utilize these flames to power abilities, items, and buildings which require phoenix flames.</description>
+    <description>Archites distributed in the blood burn chemfuel into bright phoenix flames inside the carrier. Phoenix flames replenish faster the longer chemfuel has been burning uninterrupted and deplete faster the more flames are in the carrier. The carrier can utilize these flames to power abilities, items, and buildings which require phoenix flames.</description>
     <geneClass>OOPhoenixLords.Gene_PhoenixFire</geneClass>
     <iconPath>UI/Icons/Genes/Gene_PhoenixFire</iconPath>
     <displayCategory>Archite</displayCategory>

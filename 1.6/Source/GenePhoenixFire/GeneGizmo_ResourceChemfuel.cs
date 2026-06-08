@@ -26,44 +26,6 @@ namespace OOPhoenixLords
 		{
 		}
 
-		public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
-		{
-			GizmoResult result = base.GizmoOnGUI(topLeft, maxWidth, parms);
-			float num = Mathf.Repeat(Time.time, 0.85f);
-			float num2 = 1f;
-			if (num < 0.1f)
-			{
-				num2 = num / 0.1f;
-			}
-			else if (num >= 0.25f)
-			{
-				num2 = 1f - (num - 0.25f) / 0.6f;
-			}
-			MainTabWindow_Inspect mainTabWindow_Inspect = (MainTabWindow_Inspect)MainButtonDefOf.Inspect.TabWindow;
-			Command_Ability command_Ability = MapGizmoUtility.LastMouseOverGizmo as Command_Ability;
-			if (command_Ability != null && this.gene.Max != 0f)
-			{
-				foreach (CompAbilityEffect compAbilityEffect in command_Ability.Ability.EffectComps)
-				{
-					// CompAbilityEffect_RequiresChemfuel compAbilityEffect_ChemfuelCost = compAbilityEffect as CompAbilityEffect_RequiresChemfuel;
-					// if (compAbilityEffect_ChemfuelCost != null && compAbilityEffect_ChemfuelCost.Props.phoenixChemfuelCost > 1E-45f)
-					// {
-					// 	Rect rect = this.barRect.ContractedBy(3f);
-					// 	float width = rect.width;
-					// 	float num3 = this.gene.Value / this.gene.Max;
-					// 	rect.xMax = rect.xMin + width * num3;
-					// 	float num4 = Mathf.Min(compAbilityEffect_ChemfuelCost.Props.phoenixChemfuelCost / this.gene.Max, 1f);
-					// 	rect.xMin = Mathf.Max(rect.xMin, rect.xMax - width * num4);
-					// 	GUI.color = new Color(1f, 1f, 1f, num2 * 0.7f);
-					// 	GenUI.DrawTextureWithMaterial(rect, GeneGizmo_ResourceChemfuel.ChemfuelCostTex, null, default(Rect));
-					// 	GUI.color = Color.white;
-					// 	break;
-					// }
-				}
-			}
-			return result;
-		}
-
 		protected override void DrawHeader(Rect headerRect, ref bool mouseOverElement)
 		{
 			if (this.IsDraggable)
@@ -92,7 +54,7 @@ namespace OOPhoenixLords
 					{
 						Widgets.DrawHighlight(rect);
 						string onOff = (chemfuelGene.chemfuelAllowed ? "On" : "Off").Translate().ToString().UncapitalizeFirst();
-						TooltipHandler.TipRegion(rect, () => "AutoTakeChemfuelDesc".Translate(this.gene.pawn.Named("PAWN"), chemfuelGene.PostProcessValue(chemfuelGene.targetValue).Named("MIN"), onOff.Named("ONOFF")).Resolve(), 828267373);
+						TooltipHandler.TipRegion(rect, () => "OOPL.AutoTakeChemfuelDesc".Translate(this.gene.pawn.Named("PAWN"), chemfuelGene.PostProcessValue(chemfuelGene.targetValue).Named("MIN"), onOff.Named("ONOFF")).Resolve(), 828267373);
 						mouseOverElement = true;
 					}
 				}

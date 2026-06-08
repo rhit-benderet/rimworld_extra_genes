@@ -1,0 +1,91 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using RimWorld;
+using UnityEngine;
+using Verse;
+using Verse.AI;
+
+namespace OOPhoenixLords
+{
+    public static class PhoenixFireUtil
+    {
+        public class PhoenixFireOffsetsPerSecond
+        {
+            public string displayName;
+            public float offset;
+            public PhoenixFireOffsetsPerSecond(string displayName, float offset)
+            {
+                this.displayName = displayName;
+                this.offset = offset;
+            }
+        }
+        public static IEnumerable<PhoenixFireOffsetsPerSecond> CalculateOffsets(Gene_PhoenixFire gene, Pawn pawn)
+        {
+            if (gene.Value > 0.0f)
+            {
+                yield return new PhoenixFireOffsetsPerSecond("Chemfuel Burning", ComputeBurningAmount(gene, pawn));
+            }
+            yield return new PhoenixFireOffsetsPerSecond("Entropy", -gene.phoenixFlameCur * 0.1f);
+            yield break;
+        }
+        public static float TotalOffset(Gene_PhoenixFire gene, Pawn pawn)
+        {
+            float num = 0f;
+            foreach (PhoenixFireOffsetsPerSecond item in CalculateOffsets(gene, pawn))
+            {
+                num += item.offset;
+            }
+            return num;
+        }
+        public static float ComputeBurningAmount(Gene_PhoenixFire gene, Pawn pawn)
+        {
+            if (gene.ticksWithFuel > 6 * 60000)
+            {
+                return (gene.ticksWithFuel - 6f * 60000f) / 6000000f + 0.7f;
+            } else
+            {
+                SimpleCurve curve = new SimpleCurve
+                {
+                    new CurvePoint(0f, 0.0f),
+                    new CurvePoint(50000f, 0.05f),
+                    new CurvePoint(60000f, 0.075f),
+                    new CurvePoint(120000f, 0.2f),
+                    new CurvePoint(180000f, 0.35f),
+                    new CurvePoint(240000f, 0.55f),
+                    new CurvePoint(300000f, 0.65f),
+                    new CurvePoint(360000f, 0.7f),
+                };
+                return curve.Evaluate(gene.ticksWithFuel);
+            }
+        }
+        public static void TickResourceDrainInterval(Gene_PhoenixFire drain, Pawn pawn, int delta)
+        {
+            if (drain.CanOffset && drain.Resource != null)
+            {
+                OffsetResource(drain, (0f - drain.ResourceLossPerDay) * (float)delta / 60000f);
+            }
+             if (drain.CanOffset)
+            {
+                OffsetSecondaryResource(drain, TotalOffset(drain, pawn) * (float)delta / 60f);
+            }
+        }
+
+        public static void OffsetResource(Gene_PhoenixFire drain, float amnt)
+        {
+            if (drain.Resource != null)
+            {
+                float value = drain.Resource.Value;
+                drain.Resource.Value += amnt;
+            }
+        }
+        public static void OffsetSecondaryResource(Gene_PhoenixFire drain, float amnt)
+        {
+            if (drain != null)
+            {
+                float value = drain.ValueSecondary;
+                drain.ValueSecondary += amnt;
+            }
+        }
+    }
+}
