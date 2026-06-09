@@ -81,6 +81,13 @@ namespace OOPhoenixLords
                 num += item.offset;
                 list.Add(item);
             }
+			string textBurntime = "OOPL.BurnTime".Translate(this.gene.ticksWithFuel.ToStringTicksToPeriod(true, false, true, true, false)).Resolve();
+			text = string.Concat(new string[]
+			{
+				text,
+				"\n\n",
+				textBurntime
+			});
             string text2 = (num > 0f) ? "RegenerationRate".Translate() : "DrainRate".Translate();
             text = string.Concat(new string[]
             {

@@ -21,7 +21,22 @@ namespace OOPhoenixLords
 				phoenixFlameCur = phoenixFlameMax * value;
 			}
 		}
+		public IEnumerable<IGeneResourceDrain> GetDrainGenes
+		{
+			get
+			{
+				List<Gene> genesListForReading = pawn.genes.GenesListForReading;
+				for (int i = 0; i < genesListForReading.Count; i++)
+				{
+					if (genesListForReading[i] is IGeneResourceDrain geneResourceDrain && geneResourceDrain.Resource == this)
+					{
+						yield return geneResourceDrain;
+					}
+				}
 
+				yield break;
+			}
+		}
 		public Gene_Resource Resource
 		{
 			get
@@ -124,7 +139,13 @@ namespace OOPhoenixLords
 				this.ticksWithFuel += delta;
 			} else
 			{
-				this.ticksWithFuel = 0;
+				if (this.ticksWithFuel <= 20 * delta)
+				{
+					this.ticksWithFuel = 0;
+				} else
+				{
+					this.ticksWithFuel -= 20 * delta;
+				}
 			}
 		}
 		

@@ -2,4 +2,5 @@
 <LanguageData>
     <OOPL.PerSecond>{0} / second</OOPL.PerSecond>
     <OOPL.AutoTakeChemfuelDesc>This determines whether {PAWN_nameDef} will automatically refuel with chemfuel when {PAWN_possessive} chemfuel is below {MIN}.\n\nAutomatic refueling is currently {ONOFF}.</OOPL.AutoTakeChemfuelDesc>
+    <OOPL.BurnTime>Chemfuel has been burning for {0}.</OOPL.BurnTime>
 </LanguageData>

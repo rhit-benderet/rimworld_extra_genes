@@ -1,0 +1,7 @@
+<Defs>
+    <GeneCategoryDef>
+        <defName>Phoenix</defName>
+        <label>phoenix</label>
+        <displayPriorityInXenotype>513</displayPriorityInXenotype>
+  </GeneCategoryDef>
+</Defs>

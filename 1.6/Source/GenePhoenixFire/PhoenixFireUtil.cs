@@ -38,23 +38,40 @@ namespace OOPhoenixLords
             }
             return num;
         }
+        private static float GetDrainRate(Gene_PhoenixFire gene, Pawn pawn)
+        {
+            float num = 0f;
+            foreach (IGeneResourceDrain drainGene in gene.GetDrainGenes)
+            {
+                if (drainGene.CanOffset)
+                {
+                    num += drainGene.ResourceLossPerDay;
+                }
+            }
+            return num;
+        }
         public static float ComputeBurningAmount(Gene_PhoenixFire gene, Pawn pawn)
+        {
+            float baseAmount = ComputeBurningAmountBase(gene, pawn);
+            return baseAmount * GetDrainRate(gene, pawn) / 0.2f;
+        }
+        public static float ComputeBurningAmountBase(Gene_PhoenixFire gene, Pawn pawn)
         {
             if (gene.ticksWithFuel > 6 * 60000)
             {
-                return (gene.ticksWithFuel - 6f * 60000f) / 6000000f + 0.7f;
+                return (gene.ticksWithFuel - 6f * 60000f) / 2000000f + 0.55f;
             } else
             {
                 SimpleCurve curve = new SimpleCurve
                 {
                     new CurvePoint(0f, 0.0f),
-                    new CurvePoint(50000f, 0.05f),
-                    new CurvePoint(60000f, 0.075f),
-                    new CurvePoint(120000f, 0.2f),
-                    new CurvePoint(180000f, 0.35f),
-                    new CurvePoint(240000f, 0.55f),
-                    new CurvePoint(300000f, 0.65f),
-                    new CurvePoint(360000f, 0.7f),
+                    new CurvePoint(40000f, 0.02f),
+                    new CurvePoint(60000f, 0.04f),
+                    new CurvePoint(120000f, 0.1f),
+                    new CurvePoint(180000f, 0.2f),
+                    new CurvePoint(240000f, 0.35f),
+                    new CurvePoint(300000f, 0.475f),
+                    new CurvePoint(360000f, 0.55f),
                 };
                 return curve.Evaluate(gene.ticksWithFuel);
             }
