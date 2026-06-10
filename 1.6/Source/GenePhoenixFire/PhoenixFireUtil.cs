@@ -27,6 +27,10 @@ namespace OOPhoenixLords
                 yield return new PhoenixFireOffsetsPerSecond("Chemfuel Burning", ComputeBurningAmount(gene, pawn));
             }
             yield return new PhoenixFireOffsetsPerSecond("Entropy", -gene.phoenixFlameCur * 0.1f);
+            foreach (IPhoenixFireSink phoenixFireSink in pawn.genes.GenesListForReading.OfType<IPhoenixFireSink>())
+            {
+                yield return new PhoenixFireOffsetsPerSecond(phoenixFireSink.Name, -phoenixFireSink.FirePerSecond / 100f);
+            }
             yield break;
         }
         public static float TotalOffset(Gene_PhoenixFire gene, Pawn pawn)

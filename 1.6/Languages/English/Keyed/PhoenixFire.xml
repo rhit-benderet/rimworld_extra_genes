@@ -2,5 +2,6 @@
 <LanguageData>
     <OOPL.PerSecond>{0} / second</OOPL.PerSecond>
     <OOPL.AutoTakeChemfuelDesc>This determines whether {PAWN_nameDef} will automatically refuel with chemfuel when {PAWN_possessive} chemfuel is below {MIN}.\n\nAutomatic refueling is currently {ONOFF}.</OOPL.AutoTakeChemfuelDesc>
+    <OOPL.SuperheatingActive>This determines whether {PAWN_nameDef} will use an extra {FIRE} phoenix flames per second to heat up rooms they are in to {TEMP}°C.\n\nSuperheating is currently {ONOFF}.</OOPL.SuperheatingActive>
     <OOPL.BurnTime>Chemfuel has been burning for {0}.</OOPL.BurnTime>
 </LanguageData>

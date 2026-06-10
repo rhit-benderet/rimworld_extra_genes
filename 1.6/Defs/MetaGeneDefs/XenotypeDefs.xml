@@ -13,6 +13,9 @@
             <li>OOPhoenixLords_PhoenixFire</li>
             <li>OOPhoenixLords_ChemfuelDrain</li>
             <li>PhoenixRebirth</li>
+            <li>OOPhoenixLords_RapidAging</li>
+            <li>OOPhoenixLords_Superheating</li>
+            <li>OOPhoenixLords_HeatImpervious</li>
         </genes>
     </XenotypeDef>
 </Defs>

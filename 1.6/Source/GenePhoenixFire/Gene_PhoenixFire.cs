@@ -202,7 +202,7 @@ namespace OOPhoenixLords
 			phoenixFlameMax = newMax;
 			phoenixFlameCur = Mathf.Clamp(phoenixFlameCur, 0f, phoenixFlameMax);
 		}
-		public float InitialFlameMax = 1.0f;
+		public float InitialFlameMax = 100.0f;
 		public void ResetFireMax()
 		{
 			phoenixFlameMax = InitialFlameMax;

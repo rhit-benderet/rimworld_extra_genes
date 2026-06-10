@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Defs>
-
+<Defs> 
   <GeneDef>
     <defName>OOPhoenixLords_PhoenixFire</defName>
     <label>phoenix fire</label>
@@ -28,18 +27,66 @@
     
   </GeneDef>
   <GeneDef>
-      <defName>OOPhoenixLords_ChemfuelDrain</defName>
-      <label>chemfuel drain</label>
-      <labelShortAdj>draining</labelShortAdj>
-      <description>Carriers burn an additional 15 chemfuel per day due to the extra heat in their bodies.</description>
-      <resourceLabel>chemfuel</resourceLabel>
-      <geneClass>OOPhoenixLords.Gene_ChemfuelDrain</geneClass>
-      <iconPath>UI/Icons/Genes/Gene_ChemfuelDrain</iconPath>
-      <prerequisite>OOPhoenixLords_PhoenixFire</prerequisite>
-      <resourceLossPerDay>0.15</resourceLossPerDay>
-      <displayCategory>Phoenix</displayCategory>
-      <displayOrderInCategory>-1</displayOrderInCategory>
-      <biostatCpx>1</biostatCpx>
-      <biostatMet>6</biostatMet>
-    </GeneDef>
+    <defName>OOPhoenixLords_ChemfuelDrain</defName>
+    <label>chemfuel drain</label>
+    <labelShortAdj>draining</labelShortAdj>
+    <description>Carriers burn an additional 15 chemfuel per day due to the extra heat in their bodies.</description>
+    <resourceLabel>chemfuel</resourceLabel>
+    <geneClass>OOPhoenixLords.Gene_ChemfuelDrain</geneClass>
+    <iconPath>UI/Icons/Genes/Gene_ChemfuelDrain</iconPath>
+    <prerequisite>OOPhoenixLords_PhoenixFire</prerequisite>
+    <resourceLossPerDay>0.15</resourceLossPerDay>
+    <displayCategory>Phoenix</displayCategory>
+    <displayOrderInCategory>-1</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>6</biostatMet>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>OOPhoenixLords_RapidAging</defName>
+    <label>rapid aging</label>
+    <description>Carriers of this gene age extremely rapidly. Their childhood will breeze past them in only a couple years. By the age of 18, their cells will have mostly settled, but they will still age 5 times faster than the average human.</description>
+    <iconPath>UI/Icons/Genes/Gene_RapidAging</iconPath>
+    <displayCategory>Phoenix</displayCategory>
+    <biologicalAgeTickFactorFromAgeCurve>
+      <points>
+        <li>(0, 20)</li>
+        <li>(3, 10)</li>
+        <li>(13, 10)</li>
+        <li>(18, 5)</li>
+      </points>
+    </biologicalAgeTickFactorFromAgeCurve>
+    <biostatCpx>3</biostatCpx>
+    <biostatMet>3</biostatMet>
+  </GeneDef>
+  <GeneDef>
+    <defName>OOPhoenixLords_Superheating</defName>
+    <label>superheating</label>
+    <description>Carriers of this gene are capable of using phoenix flames to continuously expell huge amounts amounts of heat from their bodies. They can choose the amount of heat they expel so it can be used to heat up rooms during the winter, or to cook enemies alive if they are foolish enough to enter an enclosed room with the pawn.</description>
+    <iconPath>UI/Icons/Genes/Gene_Superheating</iconPath>
+    <prerequisite>OOPhoenixLords_PhoenixFire</prerequisite>
+    <displayCategory>Phoenix</displayCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>-2</biostatMet>
+    <displayCategory>Phoenix</displayCategory>
+    <geneClass>OOPhoenixLords.Gene_Superheating</geneClass>
+    <showGizmoOnWorldView>true</showGizmoOnWorldView>
+    <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+  </GeneDef>
+  <GeneDef>
+    <defName>OOPhoenixLords_HeatImpervious</defName>
+    <label>heat impervious</label>
+    <description>Carriers of this gene cannot catch on fire and will be comfortable even in the most extreme heat.</description>
+    <iconPath>UI/Icons/Genes/Gene_HeatImpervious</iconPath>
+    <displayCategory>Phoenix</displayCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>-4</biostatMet>
+    <displayCategory>Phoenix</displayCategory>
+    <statOffsets>
+      <ComfyTemperatureMax>2000</ComfyTemperatureMax>
+    </statOffsets>
+    <statFactors>
+      <Flammability>0</Flammability>
+    </statFactors>
+  </GeneDef>
 </Defs>
