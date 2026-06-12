@@ -192,8 +192,36 @@ namespace OOPhoenixLords
 			{
 				yield return gizmo2;
 			}
+			foreach (Gizmo gizmo3 in this.GetBurnTimeGizmos())
+			{
+				yield return gizmo3;
+			}
 
 			yield break;
+		}
+		public IEnumerable<Gizmo> GetBurnTimeGizmos()
+		{
+			if (DebugSettings.ShowDevGizmos)
+			{
+				Command_Action command_Action = new Command_Action();
+				command_Action.defaultLabel = "DEV: Burn Time -12 hours";
+				command_Action.action = delegate
+				{
+					this.ticksWithFuel -= 2500 * 12;
+					if (this.ticksWithFuel < 0)
+					{
+						this.ticksWithFuel = 0;
+					}
+				};
+				yield return command_Action;
+				Command_Action command_Action2 = new Command_Action();
+				command_Action2.defaultLabel = "DEV: Burn Time +12 hours";
+				command_Action2.action = delegate
+				{
+					this.ticksWithFuel += 2500 * 12;
+				};
+				yield return command_Action2;
+			}
 		}
 		[Unsaved(false)]
 		protected GeneGizmo_SecondaryResource gizmo_secondary;

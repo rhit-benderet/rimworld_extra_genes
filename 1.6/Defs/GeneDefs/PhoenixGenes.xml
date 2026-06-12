@@ -56,8 +56,12 @@
         <li>(18, 5)</li>
       </points>
     </biologicalAgeTickFactorFromAgeCurve>
+    
+    <statFactors>
+      <OOPhoenixLords_GrowthPointsFactor>10.0</OOPhoenixLords_GrowthPointsFactor>
+    </statFactors>
     <biostatCpx>3</biostatCpx>
-    <biostatMet>3</biostatMet>
+    <biostatMet>2</biostatMet>
   </GeneDef>
   <GeneDef>
     <defName>OOPhoenixLords_Superheating</defName>

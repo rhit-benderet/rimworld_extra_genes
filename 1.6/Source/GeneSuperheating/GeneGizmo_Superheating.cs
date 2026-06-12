@@ -121,7 +121,11 @@ namespace OOPhoenixLords
         {
             if (!this.gene.ShouldSuperHeat)
             {
-                return "Not superheating";
+                return "Superheating deactivated";
+            }
+            if (this.gene.PhoenixFireGene.ValueSecondary <= 0)
+            {
+                return "Not enough phoenix flames to superheat";
             }
             string text = string.Format("Heating to {0}°C\n\nUsing {1} phoenix flames per second", this.gene.TemperatureSetting, this.gene.FirePerSecond);
             return text;

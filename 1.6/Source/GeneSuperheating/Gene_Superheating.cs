@@ -17,11 +17,13 @@ namespace OOPhoenixLords
 		private float? cachedTargetValue;
 		private float cachedTemperatureSetting;
 		private float cachedFlameSinkAmount;
+		private float cachedHeatPerSecond;
 		public void UpdateCachedValues()
 		{
 			this.cachedTargetValue = this.targetValue;
 			this.cachedTemperatureSetting = getTemperatureSettingFromValue(this.targetValue);
-			this.cachedFlameSinkAmount = this.cachedTemperatureSetting / 10f;
+			this.cachedFlameSinkAmount = this.cachedTemperatureSetting / 2f;
+			this.cachedHeatPerSecond = Mathf.Sqrt(this.cachedTemperatureSetting - 15) * 1.6f + 20f;
 		}
 		public float getTemperatureSettingFromValue(float value)
 		{
@@ -110,47 +112,50 @@ namespace OOPhoenixLords
 			Scribe_Values.Look<bool>(ref this.superheatingActive, "superheatingActive", true, false);
 			Scribe_Values.Look(ref targetValue, "targetValue", 0f);
 		}
-		private int ticksSinceLastAutomaticShutdown = 1000;
-		private bool cachedShouldSuperheat = true;
 		public bool CanActuallyHeat
 		{
 			get
 			{
-				return this.PhoenixFireGene.ValueSecondary > 0 && ShouldSuperHeat;
+				return this.PhoenixFireGene.ValueSecondary > 0 && ShouldSuperHeat && this.pawn.AmbientTemperature < this.TemperatureSetting;
 			}
 		}
 		public bool ShouldSuperHeat
 		{
 			get
 			{
-				if (!this.superheatingActive) return false;
-				bool shouldSuperheat = this.pawn.AmbientTemperature < this.TemperatureSetting;
-				if (this.cachedShouldSuperheat)
-				{
-					if (!shouldSuperheat)
-					{
-						this.ticksSinceLastAutomaticShutdown = 0;
-						this.cachedShouldSuperheat = false;
-					}
-					return shouldSuperheat;
-				} 
-				if (this.ticksSinceLastAutomaticShutdown > 180)
-				{
-					if (shouldSuperheat)
-					{
-						this.cachedShouldSuperheat = true;
-					}
-					return shouldSuperheat;
-				}
-				return this.cachedShouldSuperheat;
+				return this.pawn.Spawned && this.superheatingActive;
 			}
-		} 
+		}
+		public float HeatPerSecond
+		{
+			get
+			{
+				if (this.cachedTargetValue != this.targetValue)
+				{
+					UpdateCachedValues();
+				}
+				return this.cachedHeatPerSecond + Mathf.Max(0f, this.pawn.AmbientTemperature / 1.5f);
+			}
+		}
         public override void TickInterval(int delta)
 		{
 			base.TickInterval(delta);
-			float heatPerSecond = this.TemperatureSetting;
-			this.ticksSinceLastAutomaticShutdown += delta;
-			if (this.CanActuallyHeat)
+			float heatPerSecond = this.HeatPerSecond;
+			bool canHeat = this.CanActuallyHeat;
+			if (this.ShouldSuperHeat && this.PhoenixFireGene.ValueSecondary > 0)
+			{
+				if (this.pawn.IsHashIntervalTick(500, delta))
+				{
+					int flameAmount = Rand.Range(15, 30);
+					for (int i = 0; i < flameAmount; i++)
+					{
+						Vector3 c = this.pawn.DrawPos + new Vector3(Mathf.Cos(2*Mathf.PI*i/flameAmount) + Rand.Range(-0.2f, 0.2f), 0f, Mathf.Sin(2*Mathf.PI*i/flameAmount) + Rand.Range(-0.2f, 0.2f));
+						FleckMaker.ThrowFireGlow(c, this.pawn.Map, Rand.Range(Mathf.Min(0.1f + this.HeatPerSecond / 400f, 0.3f), Mathf.Min(0.15f + this.HeatPerSecond / 400f, 0.45f)));
+					}
+					
+				}
+			}
+			if (canHeat)
 			{
 				GenTemperature.PushHeat(this.pawn.PositionHeld, this.pawn.MapHeld, heatPerSecond * delta / 60f);
 			}

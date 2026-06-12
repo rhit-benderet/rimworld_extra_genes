@@ -1,0 +1,16 @@
+<Defs>
+    <StatDef>
+        <defName>OOPhoenixLords_GrowthPointsFactor</defName>
+        <label>growth point factor</label>
+        <description>A multiplier on growth points for children.</description>
+        <category>PawnHealth</category>
+        <defaultBaseValue>1.0</defaultBaseValue>
+        <toStringStyle>PercentZero</toStringStyle>
+        <showOnAnimals>false</showOnAnimals>
+        <showOnDrones>false</showOnDrones>
+        <hideAtValue>1</hideAtValue>
+        <minValue>0</minValue>
+        <displayPriorityInCategory>3500</displayPriorityInCategory>
+        <scenarioRandomizable>true</scenarioRandomizable>
+    </StatDef>
+</Defs>
