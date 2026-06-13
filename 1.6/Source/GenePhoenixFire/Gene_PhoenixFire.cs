@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using RimWorld;
 using UnityEngine;
 using Verse;
+using PhoenixRebirth;
 namespace OOPhoenixLords
 {
 	public class Gene_PhoenixFire : Gene_Resource, IGeneResourceDrain
@@ -57,7 +58,7 @@ namespace OOPhoenixLords
 		{
 			get
 			{
-				return this.Active && !this.pawn.Deathresting;
+				return this.Active && !this.pawn.Deathresting && this.pawn.ParentHolder is Building_PhoenixAsh;
 			}
 		}
 
@@ -134,17 +135,20 @@ namespace OOPhoenixLords
 		{
 			base.TickInterval(delta);
 			PhoenixFireUtil.TickResourceDrainInterval(this, pawn, delta);
-			if (this.Value > 0.0f)
+			if (this.CanOffset)
 			{
-				this.ticksWithFuel += delta;
-			} else
-			{
-				if (this.ticksWithFuel <= 20 * delta)
+				if (this.Value > 0.0f)
 				{
-					this.ticksWithFuel = 0;
+					this.ticksWithFuel += delta;
 				} else
 				{
-					this.ticksWithFuel -= 20 * delta;
+					if (this.ticksWithFuel <= 20 * delta)
+					{
+						this.ticksWithFuel = 0;
+					} else
+					{
+						this.ticksWithFuel -= 20 * delta;
+					}
 				}
 			}
 		}

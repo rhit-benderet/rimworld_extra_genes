@@ -33,13 +33,9 @@
 		<Reference Include="../../../../../../steamapps/workshop/content/294100/2009463077/Current/Assemblies/0Harmony.dll">
 			<Private>False</Private>
 		</Reference>
-		<!-- *Uncomment for VEF*-->
-		<!-- <Reference Include="../../../../../../steamapps/workshop/content/294100/2023507013/1.6/Assemblies/VEF.dll">
+		<!-- *Uncomment for PhoenixRebirth*-->
+		<Reference Include="../../../../../../steamapps/workshop/content/294100/3736576229/Assemblies/PhoenixRebirth.dll">
 			<Private>False</Private>
 		</Reference>
-		*Uncomment for VPE*
-		<Reference Include="../../../../../../steamapps/workshop/content/294100/2842502659/1.6/Assemblies/VanillaPsycastsExpanded.dll">
-			<Private>False</Private>
-		</Reference> -->
 	</ItemGroup>
 </Project>

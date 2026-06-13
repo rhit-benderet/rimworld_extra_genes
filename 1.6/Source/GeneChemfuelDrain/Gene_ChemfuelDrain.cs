@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using OOPhoenixLords;
 using Verse;
 using RimWorld;
+using PhoenixRebirth;
 
 namespace OOPhoenixLords
 {
@@ -24,9 +25,10 @@ namespace OOPhoenixLords
 		{
 			get
 			{
-				return this.Active && !this.pawn.Deathresting;
+				return this.Active && !this.pawn.Deathresting && this.pawn.ParentHolder is Building_PhoenixAsh;
 			}
 		}
+
 
 		public float ResourceLossPerDay
 		{

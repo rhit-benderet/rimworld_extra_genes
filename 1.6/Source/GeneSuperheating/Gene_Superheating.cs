@@ -152,12 +152,15 @@ namespace OOPhoenixLords
 						Vector3 c = this.pawn.DrawPos + new Vector3(Mathf.Cos(2*Mathf.PI*i/flameAmount) + Rand.Range(-0.2f, 0.2f), 0f, Mathf.Sin(2*Mathf.PI*i/flameAmount) + Rand.Range(-0.2f, 0.2f));
 						FleckMaker.ThrowFireGlow(c, this.pawn.Map, Rand.Range(Mathf.Min(0.1f + this.HeatPerSecond / 400f, 0.3f), Mathf.Min(0.15f + this.HeatPerSecond / 400f, 0.45f)));
 					}
-					
+					if (canHeat)
+					{
+						GenTemperature.PushHeat(this.pawn.PositionHeld, this.pawn.MapHeld, heatPerSecond * 500 * 4 / 600f);
+					}
 				}
 			}
 			if (canHeat)
 			{
-				GenTemperature.PushHeat(this.pawn.PositionHeld, this.pawn.MapHeld, heatPerSecond * delta / 60f);
+				GenTemperature.PushHeat(this.pawn.PositionHeld, this.pawn.MapHeld, heatPerSecond * delta * 6 / 600f);
 			}
 		}
     }
