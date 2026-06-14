@@ -88,10 +88,12 @@
     <displayCategory>Phoenix</displayCategory>
     <statOffsets>
       <ComfyTemperatureMax>2000</ComfyTemperatureMax>
+      <ArmorRating_Heat>2</ArmorRating_Heat>
     </statOffsets>
     <statFactors>
       <Flammability>0</Flammability>
     </statFactors>
+    <geneClass>OOPhoenixLords.Gene_HeatImpervious</geneClass>
   </GeneDef>
   <GeneDef>
     <defName>OOPhoenixLords_ApparelIncineration</defName>
@@ -108,7 +110,7 @@
   <GeneDef>
     <defName>OOPhoenixLords_PhoenixFireSpew</defName>
     <label>phoenix fire spew</label>
-    <description>Carriers are able to release a large burst of fresh phoenix flames from their hands. These flames will burn anything in a small area and can ignite people, objects, and the ground.</description>
+    <description>Carriers are able to release a large burst of fresh phoenix flames from their hands. These flames will burn anything in front of them and can ignite people, objects, and the ground.</description>
     <iconPath>UI/Icons/Genes/Gene_PhoenixFireSpew</iconPath>
     <prerequisite>OOPhoenixLords_PhoenixFire</prerequisite>
     <displayCategory>Ability</displayCategory>
@@ -118,6 +120,47 @@
     </abilities>
     <descriptionHyperlinks>
       <AbilityDef>OOPhoenixLords_PhoenixFireSpew</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>-2</biostatMet>
+    <symbolPack>
+      <wholeNameSymbols>
+        <li><symbol>burner</symbol></li>
+        <li><symbol>igniter</symbol></li>
+      </wholeNameSymbols>
+      <prefixSymbols>
+        <li><symbol>fire</symbol></li>
+        <li><symbol>flame</symbol></li>
+        <li><symbol>pyre</symbol></li>
+        <li><symbol>pyro</symbol></li>
+        <li><symbol>spark</symbol></li>
+        <li><symbol>ember</symbol></li>
+        <li><symbol>spew</symbol></li>
+        <li><symbol>burn</symbol></li>
+        <li><symbol>incendi</symbol></li>
+        <li><symbol>cinder</symbol></li>
+        <li><symbol>ash</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>light</symbol></li>
+        <li><symbol>burner</symbol></li>
+        <li><symbol>pyro</symbol></li>
+        <li><symbol>ash</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+  <GeneDef>
+    <defName>OOPhoenixLords_PhoenixFireBurst</defName>
+    <label>phoenix fire burst</label>
+    <description>Carriers are able to release a large burst of fresh phoenix flames all around them. These flames will burn anything in a large area and can ignite people, objects, and the ground.</description>
+    <iconPath>UI/Icons/Genes/Gene_PhoenixFireSpew</iconPath>
+    <prerequisite>OOPhoenixLords_PhoenixFire</prerequisite>
+    <displayCategory>Ability</displayCategory>
+    <marketValueFactor>1.5</marketValueFactor>
+    <abilities>
+      <li>OOPhoenixLords_PhoenixFireBurst</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>OOPhoenixLords_PhoenixFireBurst</AbilityDef>
     </descriptionHyperlinks>
     <biostatMet>-2</biostatMet>
     <symbolPack>

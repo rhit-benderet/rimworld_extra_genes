@@ -3,7 +3,7 @@
     <defName>OOPhoenixLords_PhoenixFireSpew</defName>
     <label>phoenix fire spew</label>
     <description>Releases a large burst of fresh phoenix flames from their hands. These flames will burn anything in a small area and can ignite people, objects, and the ground.</description>
-    <iconPath>UI/Abilities/OOPhoenixLords_PhoenixFireSpew</iconPath>
+    <iconPath>UI/Abilities/PhoenixFireSpew</iconPath>
     <cooldownTicksRange>10</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <ai_IsIncendiary>true</ai_IsIncendiary>
@@ -11,7 +11,7 @@
     <warmupStartSound>FireSpew_Warmup</warmupStartSound>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <range>7.9</range>
+      <range>20.9</range>
       <warmupTime>1</warmupTime>
       <soundCast>FireSpew_Resolve</soundCast>
       <targetParams>
@@ -20,8 +20,8 @@
     </verbProperties>
     <comps>
       <li Class="CompProperties_AbilityFireSpew">
-        <range>7.9</range>
-        <lineWidthEnd>3</lineWidthEnd>
+        <range>20.9</range>
+        <lineWidthEnd>6</lineWidthEnd>
         <filthDef>OOPhoenixLords_Filth_SuperheatedChemfuel</filthDef>
         <effecterDef>Fire_Spew</effecterDef>
         <canHitFilledCells>true</canHitFilledCells>
@@ -31,4 +31,37 @@
       </li>
     </comps>
   </AbilityDef>
+  <AbilityDef>
+    <defName>OOPhoenixLords_PhoenixFireBurst</defName>
+    <label>phoenix fire burst</label>
+    <description>Emit a burst of phoenix fire in all directions to form puddles of ignited liquid on the ground.</description>
+    <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+    <iconPath>UI/Abilities/PhoenixFireBurst</iconPath>
+    <cooldownTicksRange>10</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+    <targetRequired>false</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupEffecter>Fire_Burst_Warmup</warmupEffecter>
+      <warmupTime>3</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <range>13.9</range>
+      <drawAimPie>false</drawAimPie>      
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="OOPhoenixLords.CompProperties_AbilityPhoenixFireBurst">
+        <radius>13.9</radius>
+      </li>
+      <li Class="OOPhoenixLords.CompProperties_AbilityPhoenixFlamesCost">
+        <phoenixFlamesCost>5.0</phoenixFlamesCost>
+      </li>
+    </comps>
+  </AbilityDef> 
 </Defs>

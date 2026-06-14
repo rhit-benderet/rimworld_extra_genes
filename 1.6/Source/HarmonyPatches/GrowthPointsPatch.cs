@@ -14,7 +14,7 @@ namespace OOPhoenixLords
     {
         [HarmonyPatch(typeof(Pawn_AgeTracker))]
         [HarmonyPatch(nameof(Pawn_AgeTracker.GrowthPointsPerDay), MethodType.Getter)]
-        static class Building_Trap_KnowsOfTrap_Patch
+        static class Pawn_AgeTracker_GrowthPointsPerDay_Patch
         {
             static void Postfix(ref float __result, Pawn_AgeTracker __instance)
             {
