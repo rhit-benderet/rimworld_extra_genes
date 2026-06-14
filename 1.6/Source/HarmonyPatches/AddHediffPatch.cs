@@ -16,10 +16,9 @@ namespace OOPhoenixLords
         [HarmonyPatch(nameof(Pawn_HealthTracker.AddHediff), new Type[] { typeof(Hediff), typeof(BodyPartRecord), typeof(DamageInfo?), typeof(DamageWorker.DamageResult) })]
         static class Pawn_HealthTracker_AddHediff_Patch
         {
-            static bool Prefix(Pawn_HealthTracker __instance, Hediff hediff)
+            static bool Prefix(ref Hediff hediff, Pawn ___pawn)
             {
-                FieldInfo pawnFieldInfo = typeof(Pawn_HealthTracker).GetField("pawn", BindingFlags.NonPublic | BindingFlags.Instance);
-                Pawn pawn = (Pawn)pawnFieldInfo.GetValue(__instance);
+                Pawn pawn = ___pawn;
                 Pawn_GeneTracker genes = pawn.genes;
                 if (genes != null)
                 {

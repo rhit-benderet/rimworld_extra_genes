@@ -16,10 +16,9 @@ namespace OOPhoenixLords
         [HarmonyPatch(nameof(Pawn_AgeTracker.GrowthPointsPerDay), MethodType.Getter)]
         static class Pawn_AgeTracker_GrowthPointsPerDay_Patch
         {
-            static void Postfix(ref float __result, Pawn_AgeTracker __instance)
+            static void Postfix(ref float __result, Pawn ___pawn)
             {
-                FieldInfo pawnFieldInfo = typeof(Pawn_AgeTracker).GetField("pawn", BindingFlags.NonPublic | BindingFlags.Instance);
-                Pawn pawn = (Pawn)pawnFieldInfo.GetValue(__instance);
+                Pawn pawn = ___pawn;
                 float factor = pawn.GetStatValue(PhoenixLordsStatDefs.OOPhoenixLords_GrowthPointsFactor, true);
                 __result *= factor;
             }
