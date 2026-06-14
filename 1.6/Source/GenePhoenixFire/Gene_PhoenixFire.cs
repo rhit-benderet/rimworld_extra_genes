@@ -58,7 +58,7 @@ namespace OOPhoenixLords
 		{
 			get
 			{
-				return this.Active && !this.pawn.Deathresting && this.pawn.ParentHolder is Building_PhoenixAsh;
+				return this.Active && !this.pawn.Deathresting && !(this.pawn.ParentHolder is Building_PhoenixAsh) && this.pawn.ageTracker.AgeBiologicalYears >= 3;
 			}
 		}
 

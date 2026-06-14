@@ -11,11 +11,14 @@
         <chanceToUseNameMaker>1</chanceToUseNameMaker>
         <genes>
             <li>OOPhoenixLords_PhoenixFire</li>
-            <li>OOPhoenixLords_ChemfuelDrain</li>
+            <li>OOPhoenixLords_BrighterBurn</li>
             <li>PhoenixRebirth</li>
             <li>OOPhoenixLords_RapidAging</li>
             <li>OOPhoenixLords_Superheating</li>
             <li>OOPhoenixLords_HeatImpervious</li>
+            <li>OOPhoenixLords_ApparelIncineration</li>
+            <li>Hair_LightOrange</li>
+            <li>Skin_DeepYellow</li>
         </genes>
     </XenotypeDef>
 </Defs>

@@ -27,13 +27,13 @@
     
   </GeneDef>
   <GeneDef>
-    <defName>OOPhoenixLords_ChemfuelDrain</defName>
-    <label>chemfuel drain</label>
+    <defName>OOPhoenixLords_BrighterBurn</defName>
+    <label>brighter burn</label>
     <labelShortAdj>draining</labelShortAdj>
     <description>Carriers burn an additional 15 chemfuel per day due to the extra heat in their bodies.</description>
     <resourceLabel>chemfuel</resourceLabel>
-    <geneClass>OOPhoenixLords.Gene_ChemfuelDrain</geneClass>
-    <iconPath>UI/Icons/Genes/Gene_ChemfuelDrain</iconPath>
+    <geneClass>OOPhoenixLords.Gene_BrighterBurn</geneClass>
+    <iconPath>UI/Icons/Genes/Gene_BrighterBurn</iconPath>
     <prerequisite>OOPhoenixLords_PhoenixFire</prerequisite>
     <resourceLossPerDay>0.15</resourceLossPerDay>
     <displayCategory>Phoenix</displayCategory>
@@ -92,5 +92,16 @@
     <statFactors>
       <Flammability>0</Flammability>
     </statFactors>
+  </GeneDef>
+  <GeneDef>
+    <defName>OOPhoenixLords_ApparelIncineration</defName>
+    <label>apparel incineration</label>
+    <description>Due to their extreme body temperature, carriers of this gene are only able to wear apparel that has an armor heat value of 70% or more. Any other apparel placed on them will be quickly incinerated.</description>
+    <iconPath>UI/Icons/Genes/Gene_ApparelIncineration</iconPath>
+    <displayCategory>Phoenix</displayCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>4</biostatMet>
+    <displayCategory>Phoenix</displayCategory>
+    <geneClass>OOPhoenixLords.Gene_ApparelIncineration</geneClass>
   </GeneDef>
 </Defs>

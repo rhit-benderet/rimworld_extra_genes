@@ -7,7 +7,7 @@ using PhoenixRebirth;
 
 namespace OOPhoenixLords
 {
-	public class Gene_ChemfuelDrain : Gene, IGeneResourceDrain
+	public class Gene_BrighterBurn : Gene, IGeneResourceDrain
 	{
 		public Gene_Resource Resource
 		{
@@ -25,7 +25,7 @@ namespace OOPhoenixLords
 		{
 			get
 			{
-				return this.Active && !this.pawn.Deathresting && this.pawn.ParentHolder is Building_PhoenixAsh;
+				return this.Active && !this.pawn.Deathresting && !(this.pawn.ParentHolder is Building_PhoenixAsh) && this.pawn.ageTracker.AgeBiologicalYears >= 3;
 			}
 		}
 
@@ -58,19 +58,6 @@ namespace OOPhoenixLords
 		{
 			base.TickInterval(delta);
 			GeneResourceDrainUtility.TickResourceDrainInterval(this, delta);
-		}
-
-		public override IEnumerable<Gizmo> GetGizmos()
-		{
-			if (!this.Active)
-			{
-				yield break;
-			}
-			foreach (Gizmo gizmo in GeneResourceDrainUtility.GetResourceDrainGizmos(this))
-			{
-				yield return gizmo;
-			}
-			yield break;
 		}
 
 		// Token: 0x0400DCFD RID: 56573

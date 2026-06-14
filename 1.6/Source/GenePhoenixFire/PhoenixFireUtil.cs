@@ -22,6 +22,7 @@ namespace OOPhoenixLords
         }
         public static IEnumerable<PhoenixFireOffsetsPerSecond> CalculateOffsets(Gene_PhoenixFire gene, Pawn pawn)
         {
+            if (!gene.CanOffset) yield break;
             if (gene.Value > 0.0f)
             {
                 yield return new PhoenixFireOffsetsPerSecond("Chemfuel Burning", ComputeBurningAmount(gene, pawn));
