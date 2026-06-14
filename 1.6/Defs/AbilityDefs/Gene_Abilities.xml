@@ -1,0 +1,34 @@
+<Defs>
+    <AbilityDef>
+    <defName>OOPhoenixLords_PhoenixFireSpew</defName>
+    <label>phoenix fire spew</label>
+    <description>Releases a large burst of fresh phoenix flames from their hands. These flames will burn anything in a small area and can ignite people, objects, and the ground.</description>
+    <iconPath>UI/Abilities/OOPhoenixLords_PhoenixFireSpew</iconPath>
+    <cooldownTicksRange>10</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>7.9</range>
+      <warmupTime>1</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityFireSpew">
+        <range>7.9</range>
+        <lineWidthEnd>3</lineWidthEnd>
+        <filthDef>OOPhoenixLords_Filth_SuperheatedChemfuel</filthDef>
+        <effecterDef>Fire_Spew</effecterDef>
+        <canHitFilledCells>true</canHitFilledCells>
+      </li>
+      <li Class="OOPhoenixLords.CompProperties_AbilityPhoenixFlamesCost">
+        <phoenixFlamesCost>1.0</phoenixFlamesCost>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>

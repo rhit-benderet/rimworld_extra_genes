@@ -46,20 +46,20 @@ namespace OOPhoenixLords
 			{
 				foreach (CompAbilityEffect compAbilityEffect in command_Ability.Ability.EffectComps)
 				{
-					// CompAbilityEffect_RequiresChemfuel compAbilityEffect_ChemfuelCost = compAbilityEffect as CompAbilityEffect_RequiresChemfuel;
-					// if (compAbilityEffect_ChemfuelCost != null && compAbilityEffect_ChemfuelCost.Props.phoenixChemfuelCost > 1E-45f)
-					// {
-					// 	Rect rect = this.barRect.ContractedBy(3f);
-					// 	float width = rect.width;
-					// 	float num3 = this.gene.Value / this.gene.Max;
-					// 	rect.xMax = rect.xMin + width * num3;
-					// 	float num4 = Mathf.Min(compAbilityEffect_ChemfuelCost.Props.phoenixChemfuelCost / this.gene.Max, 1f);
-					// 	rect.xMin = Mathf.Max(rect.xMin, rect.xMax - width * num4);
-					// 	GUI.color = new Color(1f, 1f, 1f, num2 * 0.7f);
-					// 	GenUI.DrawTextureWithMaterial(rect, GeneGizmo_ResourcePhoenixFlames.ChemfuelCostTex, null, default(Rect));
-					// 	GUI.color = Color.white;
-					// 	break;
-					// }
+					CompAbilityEffect_AbilityPhoenixFlamesCost compAbilityEffect_ChemfuelCost = compAbilityEffect as CompAbilityEffect_AbilityPhoenixFlamesCost;
+					if (compAbilityEffect_ChemfuelCost != null && compAbilityEffect_ChemfuelCost.Props.phoenixFlamesCost > 1E-45f)
+					{
+						Rect rect = this.barRect.ContractedBy(3f);
+						float width = rect.width;
+						float num3 = this.gene.ValueSecondary / this.gene.MaxSecondary;
+						rect.xMax = rect.xMin + width * num3;
+						float num4 = Mathf.Min(compAbilityEffect_ChemfuelCost.Props.phoenixFlamesCost / this.gene.MaxSecondary, 1f);
+						rect.xMin = Mathf.Max(rect.xMin, rect.xMax - width * num4);
+						GUI.color = new Color(1f, 1f, 1f, num2 * 0.7f);
+						GenUI.DrawTextureWithMaterial(rect, GeneGizmo_ResourcePhoenixFlames.PhoenixFlamesCostTex, null, default(Rect));
+						GUI.color = Color.white;
+						break;
+					}
 				}
 			}
 			return result;
@@ -115,7 +115,7 @@ namespace OOPhoenixLords
 			return text;
 		}
 
-		private static readonly Texture2D PhoenixFlamesCostTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.78f, 0.72f, 0.00f));
+		private static readonly Texture2D PhoenixFlamesCostTex = SolidColorMaterials.NewSolidColorTexture(new ColorInt(255, 205, 6).ToColor);
 
 		private const float TotalPulsateTime = 0.85f;
 

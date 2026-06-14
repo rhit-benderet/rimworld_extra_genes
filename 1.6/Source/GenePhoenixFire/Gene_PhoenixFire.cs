@@ -45,6 +45,7 @@ namespace OOPhoenixLords
 				return this;
 			}
 		}
+    	public virtual float MaxSecondary => phoenixFlameMax;
 
 		public Pawn Pawn
 		{
@@ -120,7 +121,7 @@ namespace OOPhoenixLords
 		{
 			get
 			{
-				return new ColorInt(255, 69, 0).ToColor;
+				return new ColorInt(190, 16, 19).ToColor;
 			}
 		}
 
@@ -128,7 +129,7 @@ namespace OOPhoenixLords
 		{
 			get
 			{
-				return new ColorInt(255, 91, 31).ToColor;
+				return new ColorInt(230, 32, 36).ToColor;
 			}
 		}
 		public override void TickInterval(int delta)
