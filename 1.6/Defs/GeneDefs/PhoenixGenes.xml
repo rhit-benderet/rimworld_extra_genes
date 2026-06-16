@@ -152,7 +152,7 @@
     <defName>OOPhoenixLords_PhoenixFireBurst</defName>
     <label>phoenix fire burst</label>
     <description>Carriers are able to release a large burst of fresh phoenix flames all around them. These flames will burn anything in a large area and can ignite people, objects, and the ground.</description>
-    <iconPath>UI/Icons/Genes/Gene_PhoenixFireSpew</iconPath>
+    <iconPath>UI/Icons/Genes/Gene_PhoenixFireBurst</iconPath>
     <prerequisite>OOPhoenixLords_PhoenixFire</prerequisite>
     <displayCategory>Ability</displayCategory>
     <marketValueFactor>1.5</marketValueFactor>
@@ -189,5 +189,26 @@
       </suffixSymbols>
     </symbolPack>
   </GeneDef>
-
+  <GeneDef ParentName="GeneHairColorBase">
+    <defName>OOPhoenixLords_Hair_FireYellow</defName>
+    <label>fire-yellow hair</label>
+    <hairColorOverride>(255, 205, 6)</hairColorOverride>
+    <selectionWeight>0</selectionWeight>
+    <displayOrderInCategory>0</displayOrderInCategory>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+  </GeneDef>
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>OOPhoenixLords_Skin_FireOrange</defName>
+    <label>fire-orange skin</label>
+    <labelShortAdj>fire-orange</labelShortAdj>
+    <description>Carriers of this gene produce a pigment that gives their skin an fiery-orange color.</description>
+    <skinColorOverride>(238, 119, 28)</skinColorOverride>
+    <displayOrderInCategory>69</displayOrderInCategory>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>orange</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+  </GeneDef>
 </Defs>

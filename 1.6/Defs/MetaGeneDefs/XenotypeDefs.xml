@@ -1,13 +1,12 @@
 <Defs>
-    <XenotypeDef>
+    <XenotypeDef Class="OOPhoenixLords.FullyCapitalizedXenotypeDef">
         <defName>OOPhoenixLords_PhoenixLord</defName>
-        <label>Phoenix Lord</label>
-        <description>With gray skin adapted to artificial light, they thrive in cramped and dark spaces where combat and travel happen over short distances. They are extremely capable at digging or mining tasks. In the open, however, they suffer from a sensitivity to light, slow speed and poor eyesight at distance.\n\nAfter the first tunnel colonies failed due to the stress of confinement, colonization agencies began genetically altering colonists to live without open space or sunlight. This xenotype is known colloquially as the dirtmoles. Today, dirtmoles have expanded out of their original tunnel homes and rule many confined spaces in the anthrosphere. They can be found in deep mines, cramped low-tech spacecraft, and teeming by the billions in the dark underlayers of countless urbworlds.</description>
-        <descriptionShort>With gray skin adapted to artificial light, dirtmoles thrive in cramped and dark spaces where combat and travel happen over short distances. They are naturals at digging and navigating complex tunnel structures. In the open, they suffer from a sensitivity to light, slow speed and poor eyesight at distance.</descriptionShort>
-        <iconPath>UI/Icons/Xenotypes/Dirtmole</iconPath>
+        <label>phoenix lord</label>
+        <description>Forged in the heart of a volcano, phoenix lords are entirely impervious to heat, can spew fire from their hands or burst into a large ball of flame. They age extremely rapidly and will resurrect as a baby when killed. They must constantly burn chemfuel to fuel their phoenix flames, which makes them smell like gas. They will also burn any worn armor that isn't extremely heat resistant. They can be rarely found in extremely hot environments such as deserts or near volcanoes. Due to their similarity to impids, phoenix lords will allow impids in their ranks to boost their numbers.</description>
+        <descriptionShort>Forged in the heart of a volcano, phoenix lords are entirely impervious to heat, can spew fire from their hands or burst into a large ball of flame. They age extremely rapidly and will resurrect as a baby when killed. They must constantly burn chemfuel to fuel their phoenix flames, which makes them smell like gas. They will also burn any worn armor that isn't extremely heat resistant.</descriptionShort>
+        <iconPath>UI/Icons/Xenotypes/PhoenixLord</iconPath>
         <inheritable>true</inheritable>
-        <nameMaker>NamerPersonDirtmole_Male</nameMaker>
-        <nameMakerFemale>NamerPersonDirtmole_Female</nameMakerFemale>
+        <nameMaker>NamerPersonImpid</nameMaker>
         <chanceToUseNameMaker>1</chanceToUseNameMaker>
         <genes>
             <li>OOPhoenixLords_PhoenixFire</li>
@@ -19,8 +18,10 @@
             <li>OOPhoenixLords_ApparelIncineration</li>
             <li>OOPhoenixLords_PhoenixFireSpew</li>
             <li>OOPhoenixLords_PhoenixFireBurst</li>
-            <li>Hair_LightOrange</li>
-            <li>Skin_DeepYellow</li>
+            <li>OOPhoenixLords_Hair_FireYellow</li>
+            <li>OOPhoenixLords_Skin_FireOrange</li>
+            <li>Eyes_Red</li>
+            <li>Hair_Grayless</li>
         </genes>
     </XenotypeDef>
 </Defs>

@@ -83,7 +83,7 @@ namespace OOPhoenixLords
 		{
 			get
 			{
-				return 1f;
+				return 5f;
 			}
 		}
 
@@ -91,7 +91,7 @@ namespace OOPhoenixLords
 		{
 			get
 			{
-				return 0.15f;
+				return -1;
 			}
 		}
 		public override float MaxLevelOffset
@@ -174,6 +174,14 @@ namespace OOPhoenixLords
 		{
 			return this.Value < this.targetValue;
 		}
+        public override void PostAdd()
+        {
+            base.PostAdd();
+			if (PawnGenerator.IsBeingGenerated(this.pawn) && !this.pawn.IsColonist && !this.pawn.health.hediffSet.HasHediff(HediffDefOf.CryptosleepSickness))
+			{
+				this.ticksWithFuel = Rand.Range(Mathf.Min(Mathf.FloorToInt(4 * this.pawn.ageTracker.AgeChronologicalTicks / 10), 900000), Mathf.Min(Mathf.FloorToInt(6 * this.pawn.ageTracker.AgeChronologicalTicks / 10), 3600000));
+			}
+        }
 		public override IEnumerable<Gizmo> GetGizmos()
 		{
 			if (!this.Active)
