@@ -211,4 +211,29 @@
       </prefixSymbols>
     </symbolPack>
   </GeneDef>
+  <GeneDef>
+    <defName>OOPhoenixLords_ChemfuelSmell</defName>
+    <label>chemfuel smell</label>
+    <description>Carriers of this gene reek of burning chemfuel. This will sour social relationships with anyone who doesn't share this gene.</description>
+    <iconPath>UI/Icons/Genes/Gene_ChemfuelSmell</iconPath>
+    <displayCategory>Phoenix</displayCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>2</biostatMet>
+  </GeneDef>
+  <GeneDef>
+    <defName>OOPhoenixLords_PhoenixFlight</defName>
+    <label>phoenix flight</label>
+    <description>Carriers of this gene are able to fly to a distant location and leave a trail of flames in their path.</description>
+    <iconPath>UI/Icons/Genes/PhoenixFlight</iconPath>
+    <prerequisite>OOPhoenixLords_PhoenixFire</prerequisite>
+    <displayCategory>Ability</displayCategory>
+    <marketValueFactor>1.5</marketValueFactor>
+    <abilities>
+      <li>OOPhoenixLords_PhoenixFlight</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>OOPhoenixLords_PhoenixFlight</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>-2</biostatMet>
+  </GeneDef>
 </Defs>

@@ -1,0 +1,17 @@
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BodyDef//li[def="Nose"]/groups</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BodyDef//li[def="Nose"]</xpath>
+      <value>
+        <groups />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/BodyDef//li[def="Nose"]/groups</xpath>
+    <value>
+      <li>OOPhoenixLords_Nose</li>
+    </value>
+  </Operation>
+</Patch>

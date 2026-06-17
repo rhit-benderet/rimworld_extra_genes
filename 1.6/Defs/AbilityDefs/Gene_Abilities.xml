@@ -64,4 +64,37 @@
       </li>
     </comps>
   </AbilityDef> 
+    <AbilityDef Name="OOPhoenixLords_PhoenixFlight">
+    <defName>OOPhoenixLords_PhoenixFlight</defName>
+    <label>phoenix flight</label>
+    <description>Fly to a distant location and leave a trail of flames in your path.</description>
+    <iconPath>UI/Abilities/PhoenixFlight</iconPath>
+    <cooldownTicksRange>10</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>OOPhoenixLords.Verb_CastAbilityPheonixFlight</verbClass>
+      <label>fly</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>0.5</warmupTime>
+      <range>29.9</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>Longjump_Jump</soundCast>
+      <soundLanding>Longjump_Land</soundLanding>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="OOPhoenixLords.CompProperties_AbilityPhoenixFlamesCost">
+        <phoenixFlamesCost>4.0</phoenixFlamesCost>
+      </li>
+      <li Class="OOPhoenixLords.CompProperties_AbilityLeaveFlamePath">
+        <radius>6</radius>
+      </li>
+    </comps>
+  </AbilityDef>
 </Defs>

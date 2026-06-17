@@ -7,5 +7,6 @@ namespace OOPhoenixLords
     public static class PhoenixLordsThingDefs
     {
         public static ThingDef OOPhoenixLords_Filth_SuperheatedChemfuel;
+        public static ThingDef OOPhoenixLords_PhoenixFlyer;
     }
 }

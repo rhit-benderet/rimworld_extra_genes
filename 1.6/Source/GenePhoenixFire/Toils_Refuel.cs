@@ -22,20 +22,7 @@ namespace OOPhoenixLords
                 Thing thing = curJob.GetTarget(ingestibleInd).Thing;
                 Gene_PhoenixFire chemfuelGene = ingester.genes.GetGene(PhoenixLordsGeneDefs.OOPhoenixLords_PhoenixFire) as Gene_PhoenixFire;
                 int num = Mathf.Min(thing.stackCount, curJob.count);
-                if (chemfuelGene != null) {
-                    chemfuelGene.Refuel(thing, num);
-                }
-                if (thing.stackCount == num)
-                {
-                    ingester.carryTracker.innerContainer.Remove(thing);
-                    if (!thing.Destroyed)
-                    {
-                        thing.Destroy(DestroyMode.Vanish);
-                    }
-                } else
-                {
-                    thing.SplitOff(num);
-                }
+                ChemfuelConsumptionUtil.Refuel(ref chemfuelGene, ref thing, num, ref ingester);
             }
             );
             toil.WithProgressBar(ingestibleInd, delegate

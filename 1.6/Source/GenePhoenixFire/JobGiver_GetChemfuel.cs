@@ -54,25 +54,21 @@ namespace OOPhoenixLords
 			}
 			return null;
 		}
-        private static bool IsChemfuel(Thing thing)
-        {
-            return thing.HasComp<Comp_PhoenixFireFuel>();
-        }
 		private Thing GetChemfuel(Pawn pawn)
 		{
 			Thing carriedThing = pawn.carryTracker.CarriedThing;
-			if (carriedThing != null && IsChemfuel(carriedThing))
+			if (carriedThing != null && ChemfuelConsumptionUtil.IsChemfuel(carriedThing))
 			{
 				return carriedThing;
 			}
 			for (int i = 0; i < pawn.inventory.innerContainer.Count; i++)
 			{
-				if (IsChemfuel(pawn.inventory.innerContainer[i]))
+				if (ChemfuelConsumptionUtil.IsChemfuel(pawn.inventory.innerContainer[i]))
 				{
 					return pawn.inventory.innerContainer[i];
 				}
 			}
-			return GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, pawn.Map.listerThings.GetAllThings(IsChemfuel), PathEndMode.OnCell, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false, false, false, true), 9999f, (Thing t) => pawn.CanReserve(t, 1, -1, null, false) && !t.IsForbidden(pawn), null, false);
+			return GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, pawn.Map.listerThings.GetAllThings(ChemfuelConsumptionUtil.IsChemfuel), PathEndMode.OnCell, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false, false, false, true), 9999f, (Thing t) => pawn.CanReserve(t, 1, -1, null, false) && !t.IsForbidden(pawn), null, false);
 		}
 	}
 }

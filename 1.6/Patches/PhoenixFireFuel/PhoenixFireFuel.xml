@@ -2,7 +2,7 @@
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/ThingDef[defName="Chemfuel"]/comps</xpath>
     <nomatch Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="Chemfuel"]/comps</xpath>
+      <xpath>Defs/ThingDef[defName="Chemfuel"]</xpath>
       <value>
         <comps />
       </value>

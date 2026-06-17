@@ -267,9 +267,10 @@ namespace OOPhoenixLords
 		}
 		public override void Reset()
 		{
+			base.Reset();
 			phoenixFlameCur = 0;
 			phoenixFlameMax = InitialFlameMax;
-			base.Reset();
+        	targetValue = 0.5f * InitialFlameMax;
 		}
 		public bool chemfuelAllowed = true;
 		public float phoenixFlameMax;
