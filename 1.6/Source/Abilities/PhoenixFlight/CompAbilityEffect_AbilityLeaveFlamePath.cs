@@ -39,16 +39,13 @@ namespace OOPhoenixLords
 			float radius = 0f;
 			DamageDef flame = DamageDefOf.Flame;
 			ThingDef filthDef = PhoenixLordsThingDefs.OOPhoenixLords_Filth_SuperheatedChemfuel;
-			int damAmount = 0;
-			float armorPenetration = -1f;
+			int damAmount = 10;
+			float armorPenetration = 0f;
 			ThingDef postExplosionSpawnThingDef = filthDef;
 			float postExplosionSpawnChance = 1f;
 			int postExplosionSpawnThingCount = 1;
             float trueRadius = (target.Cell - cell).LengthHorizontal;
             float speed = (trueRadius * 1.5f) / numOfTicks;
-            Log.Message("Speed: " + speed);
-            Log.Message("Radius: " + trueRadius);
-            Log.Message("NumOfTicks: " + numOfTicks);
             List<IntVec3> overrideCells = this.AffectedCells(target);
             GenExplosion.DoExplosion(
                 center: cell,

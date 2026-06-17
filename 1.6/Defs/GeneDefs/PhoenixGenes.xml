@@ -224,7 +224,7 @@
     <defName>OOPhoenixLords_PhoenixFlight</defName>
     <label>phoenix flight</label>
     <description>Carriers of this gene are able to fly to a distant location and leave a trail of flames in their path.</description>
-    <iconPath>UI/Icons/Genes/PhoenixFlight</iconPath>
+    <iconPath>UI/Icons/Genes/Gene_PhoenixFlight</iconPath>
     <prerequisite>OOPhoenixLords_PhoenixFire</prerequisite>
     <displayCategory>Ability</displayCategory>
     <marketValueFactor>1.5</marketValueFactor>
