@@ -7,16 +7,25 @@ using PhoenixRebirth;
 
 namespace OOPhoenixLords
 {
-	public class Gene_HeatImpervious : GeneWithHediffTracking
+	public class Gene_HeatImpervious : GeneWithHediffAndDamageTracking
 	{
-		public override void PreApplyHediff(ref Hediff hediff, out bool absorbed)
+		public override void PreApplyHediff(Hediff hediff, out bool absorbed)
 		{
-			base.PreApplyHediff(ref hediff, out absorbed);
+			base.PreApplyHediff(hediff, out absorbed);
 			if (absorbed)
 			{
 				return;
 			}
-			absorbed = hediff.def == VanillaHedifDefs.Burn;
+			absorbed = hediff.def == VanillaDefs.Burn;
+		}
+		public override void PreApplyDamage(DamageInfo dinfo, out bool absorbed)
+		{
+			base.PreApplyDamage(dinfo, out absorbed);
+			if (absorbed)
+			{
+				return;
+			}
+			absorbed = dinfo.Def.armorCategory == VanillaDefs.Heat;
 		}
 	}
 }

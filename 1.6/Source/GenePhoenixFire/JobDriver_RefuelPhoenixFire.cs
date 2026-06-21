@@ -82,7 +82,7 @@ namespace OOPhoenixLords
 					array[num] = ((pawn != null) ? pawn.ToString() : null);
 					array[2] = " on job ";
 					array[3] = ((this != null) ? this.ToString() : null);
-					array[4] = " failed, because it could not register food from ";
+					array[4] = " failed, because it could not register chemfuel from ";
 					int num2 = 5;
 					Thing thing2 = thing;
 					array[num2] = ((thing2 != null) ? thing2.ToString() : null);

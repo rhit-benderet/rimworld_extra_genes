@@ -1,0 +1,99 @@
+<Defs>
+    <ThingDef Name="InjectBase" Abstract="True">
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <drawerType>MapMeshOnly</drawerType>
+        <useHitPoints>true</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <selectable>true</selectable>
+        <statBases>
+        <MaxHitPoints>50</MaxHitPoints>
+        <Flammability>1.0</Flammability>
+        <DeteriorationRate>2</DeteriorationRate>
+        <Beauty>-4</Beauty>
+        </statBases>
+        <altitudeLayer>Item</altitudeLayer>
+        <stackLimit>150</stackLimit>
+        <thingCategories>
+            <li>Drugs</li>
+        </thingCategories>
+        <tradeTags>
+            <li>Drugs</li>
+        </tradeTags>
+        <alwaysHaulable>true</alwaysHaulable>
+        <comps>
+            <li Class="CompProperties_Forbiddable" />
+        </comps>
+        <pathCost>14</pathCost>
+        <burnableByRecipe>true</burnableByRecipe>
+        <resourceReadoutPriority>Last</resourceReadoutPriority>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <allowedArchonexusCount>-1</allowedArchonexusCount>
+        <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
+        <orderedTakeGroup>Drug</orderedTakeGroup>
+    </ThingDef>
+    
+    <ThingDef Name="MakeableInjectBase" ParentName="InjectBase" Abstract="True">
+        <recipeMaker>
+            <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+            <workSkill>Intellectual</workSkill>
+            <effectWorking>Cook</effectWorking>
+            <soundWorking>Recipe_CookMeal</soundWorking>
+            <bulkRecipeCount>4</bulkRecipeCount>
+        </recipeMaker>
+    </ThingDef>
+    <ThingDef ParentName="MakeableInjectBase">
+        <defName>OOPhoenixLords_RefinedPhoenixBlood</defName>
+        <label>refined phoenix blood</label>
+        <description>Blood from a phoenix lord refined with glitterworld medicine and infused with archites. Refined phoenix blood is an extremely potent combat enhancement drug for phoenix lords, allowing them to gain complete immortality and extremely powerful abilities for two hours. Unfortunately, after an hour, the power will become too much for the user to handle and they will be instantly killed, for most pureblood phoenix lords this simply means reliving their childhood.</description>
+        <descriptionHyperlinks>
+            <HediffDef>OOPhoenixLords_RefinedPhoenixBloodHediff</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/Drug/RefinedPhoenixBlood</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.75</drawSize>
+            <shaderType>Transparent</shaderType>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>2500</WorkToMake>
+            <MarketValue>14</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <minRewardCount>10</minRewardCount>
+        <recipeMaker>
+        <researchPrerequisite>PsychiteRefining</researchPrerequisite>
+        <recipeUsers>
+            <li>DrugLab</li>
+        </recipeUsers>
+        <soundWorking>Recipe_Drug</soundWorking>
+        <displayPriority>1600</displayPriority>
+        </recipeMaker>
+        <costList>
+            <PsychoidLeaves>4</PsychoidLeaves>
+            <MedicineUltratech>4</MedicineUltratech>
+            <ArchiteCapsule>1</ArchiteCapsule>
+        </costList>
+        <comps>
+            <li Class="OOPhoenixLords.CompProperties_InjectableDrugWithConditions">
+                <injectConditions>OOPhoenixLords.UnrefinedBloodPhoenixLord</injectConditions>
+                <appliedHediffs>
+                    <li>OOPhoenixLords_RefinedPhoenixBloodHediff</li>
+                </appliedHediffs>
+                <baseInjectTicks>650</baseInjectTicks>
+                <injectSound>Bloodfeed_Cast</injectSound>
+                <injectEffect>Smoke_Flake</injectEffect>
+                <injectEffectEat>EatVegetarian</injectEffectEat>
+                <injectHoldOffsetStanding>
+                    <northDefault>
+                        <offset>(0.23,0,0.065)</offset>
+                    </northDefault>
+                </injectHoldOffsetStanding>
+                <injectCommandString>Inject {0}</injectCommandString>
+                <injectReportString>Injecting {0}.</injectReportString>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

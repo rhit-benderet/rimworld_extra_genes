@@ -60,7 +60,8 @@ namespace OOPhoenixLords
                 postExplosionSpawnThingCount: postExplosionSpawnThingCount,
                 chanceToStartFire: 1f,
                 overrideCells: overrideCells,
-                propagationSpeed: speed
+                propagationSpeed: speed,
+                doSoundEffects: false
             );
 		}
         

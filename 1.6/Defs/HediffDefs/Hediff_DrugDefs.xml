@@ -1,0 +1,55 @@
+<Defs>
+    <HediffDef>
+        <defName>OOPhoenixLords_RefinedPhoenixBloodHediff</defName>
+        <tendable>false</tendable>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>refined phoenix blood</label>
+        <description>Refined phoenix blood is coursing through their veins making them entirely immortal, immune to all forms of damage, and granting them near full control over heat.</description>
+        <makesSickThought>false</makesSickThought>
+        <isInfection>false</isInfection>
+        <initialSeverity>0.01</initialSeverity>
+        <preventsDeath>true</preventsDeath>
+        <lethalSeverity>1.01</lethalSeverity>
+        <isBad>false</isBad>
+        <everCurableByItem>false</everCurableByItem>
+        <makesSickThought>false</makesSickThought>
+        <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+        <stages>
+            <li>
+                <statFactors>
+                    <IncomingDamageFactor>0.0</IncomingDamageFactor>
+                    <StaggerDurationFactor>0.0</StaggerDurationFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>12</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_ReplaceHediff">
+                <hediffs>
+                    <li>
+                        <hediff>OOPhoenixLords_RefinedPhoenixBloodOverload</hediff>
+                    </li>
+                </hediffs>
+                <severity>1.01</severity>
+            </li>
+        </comps>
+    </HediffDef>
+    <HediffDef>
+        <defName>OOPhoenixLords_RefinedPhoenixBloodOverload</defName>
+        <tendable>false</tendable>
+        <hediffClass>Hediff</hediffClass>
+        <label>refined phoenix blood (overload)</label>
+        <description>The refined phoenix blood has attacked their body instantly killing them.</description>
+        <makesSickThought>false</makesSickThought>
+        <isInfection>false</isInfection>
+        <initialSeverity>0.01</initialSeverity>
+        <lethalSeverity>0.001</lethalSeverity>
+        
+        <isBad>true</isBad>
+        <everCurableByItem>false</everCurableByItem>
+        <makesSickThought>false</makesSickThought>
+        <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    </HediffDef>
+</Defs>

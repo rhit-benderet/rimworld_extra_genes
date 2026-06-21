@@ -47,7 +47,7 @@ namespace OOPhoenixLords
         {
             get
             {
-                string text = "Phoenix Flames".CapitalizeFirst();
+                string text = "OOPL.PhoenixFlames".Translate().CapitalizeFirst();
                 if (Find.Selector.SelectedPawns.Count != 1)
                 {
                     text = text + " (" + gene.pawn.LabelShort + ")";

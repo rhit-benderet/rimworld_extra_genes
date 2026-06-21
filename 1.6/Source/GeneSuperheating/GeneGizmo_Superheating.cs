@@ -45,7 +45,7 @@ namespace OOPhoenixLords
         {
             get
             {
-                string text = "Superheating".CapitalizeFirst();
+                string text = "OOPL.Superheating".Translate().CapitalizeFirst();
                 if (Find.Selector.SelectedPawns.Count != 1)
                 {
                     text = text + " (" + gene.pawn.LabelShort + ")";
@@ -121,13 +121,13 @@ namespace OOPhoenixLords
         {
             if (!this.gene.ShouldSuperHeat)
             {
-                return "Superheating deactivated";
+                return "OOPL.SuperheatingDeactivated".Translate().CapitalizeFirst();
             }
             if (this.gene.PhoenixFireGene.ValueSecondary <= 0)
             {
-                return "Not enough phoenix flames to superheat";
+                return "OOPL.NotEnoughFlames".Translate().CapitalizeFirst();
             }
-            string text = string.Format("Heating to {0}°C\n\nUsing {1} phoenix flames per second", this.gene.TemperatureSetting, this.gene.FirePerSecond);
+            string text = "OOPL.SuperheatingTooltip".Translate(this.gene.TemperatureSetting.Named("TEMP"), this.gene.FirePerSecond.Named("FIRE")).CapitalizeFirst();
             return text;
         }
     }

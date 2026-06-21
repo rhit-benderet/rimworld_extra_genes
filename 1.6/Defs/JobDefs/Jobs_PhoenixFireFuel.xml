@@ -5,4 +5,10 @@
         <reportString>refueling with TargetA.</reportString>
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
     </JobDef>
+    <JobDef>
+        <defName>OOPhoenixLords_Inject</defName>
+        <driverClass>OOPhoenixLords.JobDriver_Inject</driverClass>
+        <reportString>injecting TargetA.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
 </Defs>

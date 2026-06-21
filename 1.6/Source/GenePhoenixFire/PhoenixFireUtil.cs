@@ -25,9 +25,9 @@ namespace OOPhoenixLords
             if (!gene.CanOffset) yield break;
             if (gene.Value > 0.0f)
             {
-                yield return new PhoenixFireOffsetsPerSecond("Chemfuel Burning", ComputeBurningAmount(gene, pawn));
+                yield return new PhoenixFireOffsetsPerSecond("OOPL.ChemfuelBurning".Translate().CapitalizeFirst(), ComputeBurningAmount(gene, pawn));
             }
-            yield return new PhoenixFireOffsetsPerSecond("Entropy", -gene.phoenixFlameCur * 0.1f);
+            yield return new PhoenixFireOffsetsPerSecond("OOPL.Entropy".Translate().CapitalizeFirst(), -gene.phoenixFlameCur * 0.1f);
             foreach (IPhoenixFireSink phoenixFireSink in pawn.genes.GenesListForReading.OfType<IPhoenixFireSink>())
             {
                 if (phoenixFireSink.FirePerSecond != 0f)

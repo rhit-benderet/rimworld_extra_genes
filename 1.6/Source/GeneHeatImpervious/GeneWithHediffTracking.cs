@@ -7,9 +7,13 @@ using PhoenixRebirth;
 
 namespace OOPhoenixLords
 {
-	public abstract class GeneWithHediffTracking : Gene
+	public abstract class GeneWithHediffAndDamageTracking : Gene
 	{
-		public virtual void PreApplyHediff(ref Hediff hediff, out bool absorbed)
+		public virtual void PreApplyHediff(Hediff hediff, out bool absorbed)
+		{
+			absorbed = false;
+		}
+		public virtual void PreApplyDamage(DamageInfo dinfo, out bool absorbed)
 		{
 			absorbed = false;
 		}

@@ -7,5 +7,6 @@ namespace OOPhoenixLords
     public static class PhoenixLordsJobDefs
     {
         public static JobDef OOPhoenixLords_RefuelPhoenixFire;
+        public static JobDef OOPhoenixLords_Inject;
     }
 }

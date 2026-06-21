@@ -87,7 +87,7 @@ namespace OOPhoenixLords
 		}
 
 
-        public string Name => "Superheating";
+        public string Name => "OOPL.Superheating".Translate().CapitalizeFirst();
 		private GeneGizmo_Superheating gizmo;
         public override IEnumerable<Gizmo> GetGizmos()
 		{

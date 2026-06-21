@@ -74,7 +74,7 @@ namespace OOPhoenixLords
 		{
 		// 	this.tmpDrainGenes.Clear();
             List<PhoenixFireOffsetsPerSecond> list = new List<PhoenixFireOffsetsPerSecond>();
-			string text = string.Format("{0}: {1} / {2}\n", "Phoenix Flames".CapitalizeFirst().Colorize(ColoredText.TipSectionTitleColor), this.gene.ValueSecondaryForDisplay, this.gene.MaxSecondaryForDisplay);
+			string text = string.Format("{0}: {1} / {2}\n", "OOPL.PhoenixFlames".Translate().CapitalizeFirst().Colorize(ColoredText.TipSectionTitleColor), this.gene.ValueSecondaryForDisplay, this.gene.MaxSecondaryForDisplay);
             float num = 0f;
             foreach (PhoenixFireOffsetsPerSecond item in PhoenixFireUtil.CalculateOffsets(this.gene, this.gene.pawn))
             {
