@@ -26,8 +26,6 @@ namespace OOPhoenixLords
         public Type injectConditions = typeof(InjectConditions);
         public EffecterDef injectEffect;
 
-		public EffecterDef injectEffectEat;
-
 		public SoundDef injectSound;
 		public HoldOffsetSet injectHoldOffsetStanding;
 		[MustTranslate]

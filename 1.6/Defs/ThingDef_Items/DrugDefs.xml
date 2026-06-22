@@ -85,7 +85,6 @@
                 <baseInjectTicks>650</baseInjectTicks>
                 <injectSound>Bloodfeed_Cast</injectSound>
                 <injectEffect>Smoke_Flake</injectEffect>
-                <injectEffectEat>EatVegetarian</injectEffectEat>
                 <injectHoldOffsetStanding>
                     <northDefault>
                         <offset>(0.23,0,0.065)</offset>
