@@ -7,5 +7,6 @@ namespace OOPhoenixLords
     public static class PhoenixLordsHediffDefs
     {
         public static HediffDef OOPhoenixLords_RefinedPhoenixBloodHediff;
+        public static HediffDef OOPhoenixLords_BurningAlive;
     }
 }

@@ -45,7 +45,7 @@
     <ThingDef ParentName="MakeableInjectBase">
         <defName>OOPhoenixLords_RefinedPhoenixBlood</defName>
         <label>refined phoenix blood</label>
-        <description>Blood from a phoenix lord refined with glitterworld medicine and infused with archites. Refined phoenix blood is an extremely potent combat enhancement drug for phoenix lords, allowing them to gain complete immortality and extremely powerful abilities for two hours. Unfortunately, after an hour, the power will become too much for the user to handle and they will be instantly killed, for most pureblood phoenix lords this simply means reliving their childhood.</description>
+        <description>Blood refined with glitterworld medicine and infused with archites. Refined phoenix blood is an extremely potent combat enhancement drug for phoenix lords, allowing them to gain complete immortality and extremely powerful abilities for two hours. Unfortunately, after 4 hours, the power will become too much for the user to handle and they will be instantly killed, for most phoenix lords this simply means reliving their childhood.</description>
         <descriptionHyperlinks>
             <HediffDef>OOPhoenixLords_RefinedPhoenixBloodHediff</HediffDef>
         </descriptionHyperlinks>
@@ -64,7 +64,7 @@
         <techLevel>Industrial</techLevel>
         <minRewardCount>10</minRewardCount>
         <recipeMaker>
-        <researchPrerequisite>PsychiteRefining</researchPrerequisite>
+        <researchPrerequisite>OOPhoenixLords_RefinedPhoenixBlood</researchPrerequisite>
         <recipeUsers>
             <li>DrugLab</li>
         </recipeUsers>
@@ -72,7 +72,7 @@
         <displayPriority>1600</displayPriority>
         </recipeMaker>
         <costList>
-            <PsychoidLeaves>4</PsychoidLeaves>
+            <HemogenPack>10</HemogenPack>
             <MedicineUltratech>4</MedicineUltratech>
             <ArchiteCapsule>1</ArchiteCapsule>
         </costList>

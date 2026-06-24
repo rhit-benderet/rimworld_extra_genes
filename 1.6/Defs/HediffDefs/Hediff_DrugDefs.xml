@@ -2,14 +2,13 @@
     <HediffDef>
         <defName>OOPhoenixLords_RefinedPhoenixBloodHediff</defName>
         <tendable>false</tendable>
-        <hediffClass>HediffWithComps</hediffClass>
+        <hediffClass>OOPhoenixLords.Hediff_RefinedPhoenixBlood</hediffClass>
         <label>refined phoenix blood</label>
         <description>Refined phoenix blood is coursing through their veins making them entirely immortal, immune to all forms of damage, and granting them near full control over heat.</description>
         <makesSickThought>false</makesSickThought>
         <isInfection>false</isInfection>
         <initialSeverity>0.01</initialSeverity>
         <preventsDeath>true</preventsDeath>
-        <lethalSeverity>1.01</lethalSeverity>
         <isBad>false</isBad>
         <everCurableByItem>false</everCurableByItem>
         <makesSickThought>false</makesSickThought>
@@ -22,9 +21,12 @@
                 </statFactors>
             </li>
         </stages>
+        <abilities>
+            <li>OOPhoenixLords_InflictBurningAlive</li>
+        </abilities>
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>12</severityPerDay>
+                <severityPerDay>6</severityPerDay>
             </li>
             <li Class="HediffCompProperties_ReplaceHediff">
                 <hediffs>
@@ -34,12 +36,21 @@
                 </hediffs>
                 <severity>1.01</severity>
             </li>
+            <li Class="OOPhoenixLords.HediffCompProperties_PhoenixFlameMultiplier">
+                <multiplier>50</multiplier>
+            </li>
+            <li Class="HediffCompProperties_RecoveryThought">
+                <thought>OOPhoenixLords_RefinedPhoenixBloodWoreOff</thought>
+            </li>
+            <li Class="OOPhoenixLords.HediffCompProperties_ShowTimeUntilSeverity">
+                <severity>1.01</severity>
+                <label>Death in {0}.</label>
+            </li>
         </comps>
     </HediffDef>
     <HediffDef>
         <defName>OOPhoenixLords_RefinedPhoenixBloodOverload</defName>
         <tendable>false</tendable>
-        <hediffClass>Hediff</hediffClass>
         <label>refined phoenix blood (overload)</label>
         <description>The refined phoenix blood has attacked their body instantly killing them.</description>
         <makesSickThought>false</makesSickThought>
@@ -51,5 +62,37 @@
         <everCurableByItem>false</everCurableByItem>
         <makesSickThought>false</makesSickThought>
         <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    </HediffDef>
+    <HediffDef>
+        <defName>OOPhoenixLords_BurningAlive</defName>
+        <tendable>false</tendable>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>burning alive</label>
+        <description>A phoenix lord is burning them alive.</description>
+        <makesSickThought>false</makesSickThought>
+        <isInfection>false</isInfection>
+        <initialSeverity>1.0</initialSeverity>
+        
+        <isBad>true</isBad>
+        <everCurableByItem>false</everCurableByItem>
+        <makesSickThought>false</makesSickThought>
+        <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+        <comps>
+            <li Class="OOPhoenixLords.HediffCompProperties_BurnInsides">
+                <burnsPerOperation>
+                    <min>1</min>
+                    <max>3</max>
+                </burnsPerOperation>
+                <damagePerBurn>15</damagePerBurn>
+                <ticksPerBurnOperation>300</ticksPerBurnOperation>
+            </li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-6</severityPerDay>
+            </li>
+            <li Class="OOPhoenixLords.HediffCompProperties_ShowTimeUntilSeverity">
+                <severity>0.0</severity>
+                <label>Burning for {0}.</label>
+            </li>
+        </comps>
     </HediffDef>
 </Defs>

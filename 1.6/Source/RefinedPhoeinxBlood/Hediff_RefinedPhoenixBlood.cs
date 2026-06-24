@@ -1,0 +1,13 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using RimWorld;
+using Verse;
+
+namespace OOPhoenixLords
+{
+    public class Hediff_RefinedPhoenixBlood : HediffWithComps
+    {
+    }
+}

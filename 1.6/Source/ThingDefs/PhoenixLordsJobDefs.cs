@@ -8,5 +8,6 @@ namespace OOPhoenixLords
     {
         public static JobDef OOPhoenixLords_RefuelPhoenixFire;
         public static JobDef OOPhoenixLords_Inject;
+        public static JobDef OOPhoenixLords_BurnInsides;
     }
 }

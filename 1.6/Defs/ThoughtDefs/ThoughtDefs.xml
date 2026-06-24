@@ -11,4 +11,29 @@
         </li>
         </stages>
     </ThoughtDef>
+    <ThoughtDef>
+        <defName>OOPhoenixLords_HighOnRefinedPhoenixBlood</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>OOPhoenixLords_RefinedPhoenixBloodHediff</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>high on refined phoenix blood</label>
+                <description>I feel true power coursing through my veins.</description>
+                <baseMoodEffect>500</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    <ThoughtDef>
+        <defName>OOPhoenixLords_RefinedPhoenixBloodWoreOff</defName>
+        <durationDays>20</durationDays>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>refined phoenix blood withdrawl</label>
+                <description>I feel so powerless.</description>
+                <baseMoodEffect>-100</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
 </Defs>

@@ -11,4 +11,10 @@
         <reportString>injecting TargetA.</reportString>
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
     </JobDef>
+    <JobDef>
+        <defName>OOPhoenixLords_BurnInsides</defName>
+        <driverClass>OOPhoenixLords.JobDriver_BurnInsides</driverClass>
+        <reportString>burning TargetA alive.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
 </Defs>
