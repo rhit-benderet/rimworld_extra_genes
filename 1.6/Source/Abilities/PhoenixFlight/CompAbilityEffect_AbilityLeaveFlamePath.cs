@@ -39,7 +39,7 @@ namespace OOPhoenixLords
 			float radius = 0f;
 			DamageDef flame = DamageDefOf.Flame;
 			ThingDef filthDef = PhoenixLordsThingDefs.OOPhoenixLords_Filth_SuperheatedChemfuel;
-			int damAmount = 10;
+			int damAmount = this.Props.damage;
 			float armorPenetration = 0f;
 			ThingDef postExplosionSpawnThingDef = filthDef;
 			float postExplosionSpawnChance = 1f;

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace OOPhoenixLords
 {
-	public class Verb_CastAbilityPheonixFlight : Verb_CastAbility
+	public class Verb_CastAbilityPhoenixFlight : Verb_CastAbility
 	{
 		public override bool MultiSelect
 		{

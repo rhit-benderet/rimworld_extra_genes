@@ -23,6 +23,8 @@
         </stages>
         <abilities>
             <li>OOPhoenixLords_InflictBurningAlive</li>
+            <li>OOPhoenixLords_OverchargedPhoenixFireBurst</li>
+            <li>OOPhoenixLords_OverchargedPhoenixFlight</li>
         </abilities>
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">

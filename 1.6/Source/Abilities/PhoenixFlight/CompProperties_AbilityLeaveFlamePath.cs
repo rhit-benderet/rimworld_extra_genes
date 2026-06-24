@@ -11,5 +11,6 @@ namespace OOPhoenixLords
 			this.compClass = typeof(CompAbilityEffect_AbilityLeaveFlamePath);
 		}
 		public float radius;
+		public int damage = 0;
 	}
 }

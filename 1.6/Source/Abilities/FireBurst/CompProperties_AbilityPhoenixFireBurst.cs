@@ -11,5 +11,7 @@ namespace OOPhoenixLords
 		}
 
 		public float radius = 6f;
+		public int damage = 0;
+		public bool ignoreLoS = false;
 	}
 }

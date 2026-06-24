@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Verse;
 using RimWorld;
+using System.Linq;
 
 namespace OOPhoenixLords
 {
@@ -25,7 +26,12 @@ namespace OOPhoenixLords
 
 		public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
 		{
-			GenExplosion.DoExplosion(this.Pawn.Position, this.Pawn.MapHeld, this.Props.radius, DamageDefOf.Flame, this.Pawn, -1, -1f, null, null, null, null, PhoenixLordsThingDefs.OOPhoenixLords_Filth_SuperheatedChemfuel, 1f, 1, null, null, 255, false, null, 0f, 1, 1f, false, null, null, null, false, 0.6f, 0f, true, null, 1f, null, null, null, null);
+			List<IntVec3> overrideCells = null;
+			if (this.Props.ignoreLoS)
+			{
+				overrideCells = GenRadial.RadialCellsAround(this.Pawn.Position, this.Props.radius, true).ToList();
+			}
+			GenExplosion.DoExplosion(this.Pawn.Position, this.Pawn.MapHeld, this.Props.radius, DamageDefOf.Flame, this.Pawn, this.Props.damage, 0f, null, null, null, null, PhoenixLordsThingDefs.OOPhoenixLords_Filth_SuperheatedChemfuel, 1f, 1, null, null, 255, true, null, 0f, 1, 1f, false, null, null, null, false, 0.6f, 0f, true, null, 1f, null, overrideCells, null, null);
 			base.Apply(target, dest);
 		}
 
