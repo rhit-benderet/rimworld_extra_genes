@@ -17,15 +17,14 @@
           "C:\\Users\\EricBender\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net480"
+          "net472"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net480": {
-            "framework": "net48",
-            "targetAlias": "net480",
+          "net472": {
+            "targetAlias": "net472",
             "projectReferences": {}
           }
         },
@@ -42,9 +41,8 @@
         "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
-        "net480": {
-          "framework": "net48",
-          "targetAlias": "net480",
+        "net472": {
+          "targetAlias": "net472",
           "dependencies": {
             "Microsoft.NETFramework.ReferenceAssemblies": {
               "suppressParent": "All",

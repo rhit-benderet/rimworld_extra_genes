@@ -83,7 +83,7 @@
       <warmupEffecter>Fire_Burst_Warmup</warmupEffecter>
       <warmupTime>10</warmupTime>
       <requireLineOfSight>false</requireLineOfSight>
-      <range>50.9</range>
+      <range>40.9</range>
       <drawAimPie>false</drawAimPie>      
       <targetParams>
         <canTargetSelf>true</canTargetSelf>
@@ -91,7 +91,7 @@
     </verbProperties>
     <comps>
       <li Class="OOPhoenixLords.CompProperties_AbilityPhoenixFireBurst">
-        <radius>50.9</radius>
+        <radius>40.9</radius>
         <damage>250000</damage>
         <ignoreLoS>true</ignoreLoS>
       </li>

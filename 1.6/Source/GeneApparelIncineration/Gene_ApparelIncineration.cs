@@ -19,13 +19,8 @@ namespace OOPhoenixLords
 			}
 		}
 
-		public string DisplayLabel
-		{
-			get
-			{
-				return this.Label + " (" + "Gene".Translate() + ")";
-			}
-		}
+		public string DisplayLabel => this.Label + " (" + "Gene".Translate() + ")";
+
 		public IEnumerable<Apparel> GetApparelToIncinerate()
 		{
 			foreach (Apparel apparel in this.pawn.apparel.WornApparel)
