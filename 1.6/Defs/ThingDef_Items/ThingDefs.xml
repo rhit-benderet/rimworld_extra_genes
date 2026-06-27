@@ -1,33 +1,105 @@
 ﻿<Defs>
-<!--    <ThingDef>-->
-<!--        <category>Item</category>-->
-<!--        <drawerType>MapMeshOnly</drawerType>-->
-<!--        <useHitPoints>true</useHitPoints>-->
-<!--        <healthAffectsPrice>false</healthAffectsPrice>-->
-<!--        <selectable>true</selectable>-->
-<!--        <statBases>-->
-<!--            <MaxHitPoints>50</MaxHitPoints>-->
-<!--            <Flammability>1.0</Flammability>-->
-<!--            <DeteriorationRate>2</DeteriorationRate>-->
-<!--            <Beauty>-4</Beauty>-->
-<!--        </statBases>-->
-<!--        <altitudeLayer>Item</altitudeLayer>-->
-<!--        <stackLimit>150</stackLimit>-->
-<!--        <thingCategories>-->
-<!--            <li>Drugs</li>-->
-<!--        </thingCategories>-->
-<!--        <tradeTags>-->
-<!--            <li>Drugs</li>-->
-<!--        </tradeTags>-->
-<!--        <alwaysHaulable>true</alwaysHaulable>-->
-<!--        <comps>-->
-<!--            <li Class="CompProperties_Forbiddable" />-->
-<!--        </comps>-->
-<!--        <pathCost>14</pathCost>-->
-<!--        <burnableByRecipe>true</burnableByRecipe>-->
-<!--        <resourceReadoutPriority>Last</resourceReadoutPriority>-->
-<!--        <drawGUIOverlay>true</drawGUIOverlay>-->
-<!--        <allowedArchonexusCount>-1</allowedArchonexusCount>-->
-<!--        <orderedTakeGroup>Drug</orderedTakeGroup>-->
-<!--    </ThingDef>-->
+    <ThingDef>
+        <defName>OOPhoenixLords_HeatedSyringe</defName>
+        <label>heated syringe</label>
+        <thingClass>ThingWithComps</thingClass>
+        <techLevel>Industrial</techLevel>
+        <category>Item</category>
+        <drawerType>MapMeshOnly</drawerType>
+        <useHitPoints>true</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <selectable>true</selectable>
+     
+        <description>A syringe specially designed to extract and hold blood from a phoenix lord. The syringe keeps an internal temperature of 300° Celsius to prevent the phoenix lord's blood from turning into standard hemogen.</description>
+
+        <graphicData>
+            <texPath>Things/Item/Manufactured/HeatedSyringe</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.75</drawSize>
+            <shaderType>Transparent</shaderType>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Flammability>1.0</Flammability>
+            <Beauty>-4</Beauty>
+            <WorkToMake>300</WorkToMake>
+            <MarketValue>3</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <altitudeLayer>Item</altitudeLayer>
+        <stackLimit>150</stackLimit>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <alwaysHaulable>true</alwaysHaulable>
+        <comps>
+            <li Class="CompProperties_Forbiddable" />
+        </comps>
+        <pathCost>14</pathCost>
+        <burnableByRecipe>true</burnableByRecipe>
+        <resourceReadoutPriority>Last</resourceReadoutPriority>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <allowedArchonexusCount>-1</allowedArchonexusCount>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <bulkRecipeCount>4</bulkRecipeCount>
+            
+            <researchPrerequisite>Smithing</researchPrerequisite>
+            <recipeUsers>
+                <li>ElectricSmithy</li>
+                <li>FueledSmithy</li>
+            </recipeUsers>
+        </recipeMaker>
+        <costList>
+            <Steel>60</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        
+    </ThingDef>
+    
+    <ThingDef>
+        <defName>OOPhoenixLords_PhoenixBloodSyringe</defName>
+        <label>phoenix blood syringe</label>
+        <thingClass>ThingWithComps</thingClass>
+        <techLevel>Industrial</techLevel>
+        <category>Item</category>
+        <drawerType>MapMeshOnly</drawerType>
+        <useHitPoints>true</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <selectable>true</selectable>
+        <description>A syringe filled with blood from a phoenix lord kept at a constant 300° Celsius.</description>
+
+        <graphicData>
+            <texPath>Things/Item/Manufactured/PhoenixBloodSyringe</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.75</drawSize>
+            <shaderType>Transparent</shaderType>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Flammability>1.0</Flammability>
+            <Beauty>-4</Beauty>
+            <WorkToMake>300</WorkToMake>
+            <MarketValue>3</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <altitudeLayer>Item</altitudeLayer>
+        <stackLimit>150</stackLimit>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <alwaysHaulable>true</alwaysHaulable>
+        <comps>
+            <li Class="CompProperties_Forbiddable" />
+        </comps>
+        <pathCost>14</pathCost>
+        <burnableByRecipe>true</burnableByRecipe>
+        <resourceReadoutPriority>Last</resourceReadoutPriority>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <allowedArchonexusCount>-1</allowedArchonexusCount>
+        
+    </ThingDef>
 </Defs>

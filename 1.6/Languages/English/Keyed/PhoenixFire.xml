@@ -16,4 +16,7 @@
     <OOPL.SuperheatingDeactivated>Superheating deactivated</OOPL.SuperheatingDeactivated>
     <OOPL.NotEnoughFlames>Not enough phoenix flames to superheat</OOPL.NotEnoughFlames>
     <OOPL.SuperheatingTooltip>Superheating is active, heating up rooms to {TEMP}°C and burning {FIRE} phoenix flames per second.</OOPL.SuperheatingTooltip>
+    
+    <OOPL.MessagePawnHadNotEnoughBloodToProducePhoenixBlood>{PAWN_nameDef} did not have enough blood to produce phoenix blood. </OOPL.MessagePawnHadNotEnoughBloodToProducePhoenixBlood>
+    <OOPL.MessageCannotStartPhoenixBloodExtraction>{PAWN_nameDef} doesn't have enough blood to produce phoenix blood.</OOPL.MessageCannotStartPhoenixBloodExtraction>
 </LanguageData>

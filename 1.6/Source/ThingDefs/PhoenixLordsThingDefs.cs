@@ -8,5 +8,6 @@ namespace OOPhoenixLords
     {
         public static ThingDef OOPhoenixLords_Filth_SuperheatedChemfuel;
         public static ThingDef OOPhoenixLords_PhoenixFlyer;
+        public static ThingDef OOPhoenixLords_PhoenixBloodSyringe;
     }
 }

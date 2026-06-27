@@ -1,0 +1,33 @@
+﻿<Defs>
+    <RecipeDef ParentName="SurgeryFlesh">
+        <defName>OOPhoenixLords_ExtractPhoenixBlood</defName>
+        <label>extract phoenix blood</label>
+        <description>Extract blood from a phoenix lord. This blood can be used to make various phoenix related items.</description>
+        <workerClass>OOPhoenixLords.Recipe_ExtractPhoenixBlood</workerClass>
+        <jobString>Extracting phoenix blood.</jobString>
+        <workAmount>500</workAmount>
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <targetsBodyPart>false</targetsBodyPart>
+        <isViolation>true</isViolation>
+        <descriptionHyperlinks>
+            <ThingDef>OOPhoenixLords_PhoenixBloodSyringe</ThingDef>
+        </descriptionHyperlinks>
+        <uiIconThing>OOPhoenixLords_PhoenixBloodSyringe</uiIconThing>
+        <anesthetize>false</anesthetize>
+        <workSkillLearnFactor>2</workSkillLearnFactor>
+        <recipeUsers>
+            <li>Human</li>
+            <li MayRequire="Ludeon.RimWorld.Anomaly">CreepJoiner</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>OOPhoenixLords_HeatedSyringe</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+    </RecipeDef>
+</Defs>

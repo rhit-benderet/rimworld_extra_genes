@@ -24,6 +24,7 @@
         },
         "frameworks": {
           "net472": {
+            "framework": "net472",
             "targetAlias": "net472",
             "projectReferences": {}
           }
@@ -42,6 +43,7 @@
       },
       "frameworks": {
         "net472": {
+          "framework": "net472",
           "targetAlias": "net472",
           "dependencies": {
             "Microsoft.NETFramework.ReferenceAssemblies": {

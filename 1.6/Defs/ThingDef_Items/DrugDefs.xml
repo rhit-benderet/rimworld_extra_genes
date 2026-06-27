@@ -58,7 +58,7 @@
         <rotatable>false</rotatable>
         <statBases>
             <WorkToMake>2500</WorkToMake>
-            <MarketValue>14</MarketValue>
+            <MarketValue>300</MarketValue>
             <Mass>0.05</Mass>
         </statBases>
         <techLevel>Industrial</techLevel>
@@ -72,7 +72,7 @@
         <displayPriority>1600</displayPriority>
         </recipeMaker>
         <costList>
-            <HemogenPack>10</HemogenPack>
+            <OOPhoenixLords_PhoenixBloodSyringe>1</OOPhoenixLords_PhoenixBloodSyringe>
             <MedicineUltratech>4</MedicineUltratech>
             <ArchiteCapsule>1</ArchiteCapsule>
         </costList>
