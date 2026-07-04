@@ -1,0 +1,57 @@
+ManifestFileVersion: 0
+CRC: 1648343881
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3b6667be8684058822a38a42acefbfb1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 3b6667be8684058822a38a42acefbfb1
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Male_north.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Icons/Genes/Gene_ApparelIncineration.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Fat_east.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Item/Manufactured/HeatedSyringe.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Male_east.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Thin_north.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Icons/Genes/Gene_BrighterBurn.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Icons/Genes/Gene_HeatImpervious.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Hulk_south.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Item/Manufactured/PhoenixBloodSyringe.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Abilities/OverchargedPhoenixFlight.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Icons/Genes/Gene_PhoenixFire.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Icons/Genes/Gene_PhoenixFlight.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Hulk_north.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Icons/Genes/Gene_PhoenixFireSpew.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Abilities/PhoenixFlight.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Fat_north.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Icons/Xenotypes/PhoenixLord.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Hulk_east.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/World/WorldObjects/Expanding/SavagePhoenixLordTribe.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Abilities/PhoenixFireSpew.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Female_north.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Item/Drug/RefinedPhoenixBlood.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Male_south.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Thin_south.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Thin_east.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Abilities/InflictBurningAlive.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Icons/Genes/Gene_PhoenixFireBurst.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Icons/Genes/Gene_Superheating.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Fat_south.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Icons/Genes/Gene_ChemfuelSmell.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Abilities/PhoenixFireBurst.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Female_east.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Abilities/OverchargedPhoenixFireBurst.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Icons/Genes/Gene_RapidAging.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Filth/SuperheatedChemfuel/SuperheatedChemfuelA.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Female_south.png
+Dependencies: []

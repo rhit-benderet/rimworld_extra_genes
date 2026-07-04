@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   sodipodi:docname="PhoenixBloodSyringe.svg"
+   inkscape:export-filename="PhoenixBloodSyringe.png"
+   inkscape:export-xdpi="256"
+   inkscape:export-ydpi="256"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#bebebe"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="16"
+     inkscape:cx="8.875"
+     inkscape:cy="28.84375"
+     inkscape:window-width="2560"
+     inkscape:window-height="1494"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g31">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#000000"
+       empopacity="0.8627451"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="8"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <filter
+       height="1.5333333"
+       width="1.6666667"
+       y="-0.26666667"
+       x="-0.33333333"
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter30">
+      <feGaussianBlur
+         stdDeviation="1 1"
+         result="blur"
+         id="feGaussianBlur30" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 50 0 "
+         result="colormatrix"
+         id="feColorMatrix30" />
+      <feComposite
+         in="colormatrix"
+         in2="SourceGraphic"
+         operator="in"
+         id="feComposite30"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix32" />
+      <feGaussianBlur
+         id="feGaussianBlur32"
+         stdDeviation="1.5 1"
+         result="blur"
+         in="fbSourceGraphic" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <g
+       id="g31"
+       inkscape:label="Liquid+Glow"
+       style="opacity:1">
+      <g
+         id="g30"
+         inkscape:label="SyringeLiquid"
+         style="display:inline;opacity:1">
+        <path
+           id="path25"
+           style="display:inline;fill:#880808;fill-opacity:1;stroke:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           inkscape:label="Red"
+           d="M 19,21 9,31 c 0,8 8,8 8,8 L 27,29 Z" />
+      </g>
+    </g>
+    <g
+       id="g24"
+       inkscape:label="SyringeBase"
+       style="display:inline">
+      <path
+         style="display:inline;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
+         d="M 17,39 C 9,39 9,31 9,31 L 25,15 c 0,0 8,0 8,8 -1,1 -15,15 -16,16 z"
+         id="path3"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         d="M 11,37 6,42"
+         id="path6"
+         sodipodi:nodetypes="cc" />
+      <path
+         id="path24"
+         style="stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
+         d="M 26.999999,28.999999 A 5.6568527,1.4142135 45 0 1 22,26 5.6568527,1.4142135 45 0 1 19.000001,21.000001 5.6568527,1.4142135 45 0 1 24,24 a 5.6568527,1.4142135 45 0 1 2.999999,4.999999 z" />
+      <g
+         id="g12"
+         transform="translate(-3,3)">
+        <path
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           d="m 14,26 2,2"
+           id="path9" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           d="M 22,34 20,32"
+           id="path10" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           d="m 17,23 2,2"
+           id="path11" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           d="M 25,31 23,29"
+           id="path12" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           d="m 20,20 2,2"
+           id="path9-2" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           d="M 28,28 26,26"
+           id="path10-4" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           d="m 23,17 2,2"
+           id="path11-5" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           d="M 31,25 29,23"
+           id="path12-5" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           d="m 26,14 2,2"
+           id="path11-1" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           d="M 34,22 32,20"
+           id="path12-4" />
+      </g>
+      <path
+         id="path13"
+         style="fill:#ffffff;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
+         d="m 26.480597,-10.507165 c -0.653133,0.6011538 -1.024753,1.2896507 -1.024753,2.0218836 v 1.4142136 c 0,2.3431456 3.79899,4.2426407 8.485281,4.2426407 4.686291,0 8.485282,-1.8994951 8.485282,-4.2426407 v -1.4142136 c 0,-2.3431456 -3.798991,-4.2426406 -8.485282,-4.2426406 -3.221825,0 -6.023637,0.898219 -7.460528,2.220757 z"
+         transform="rotate(45)" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         d="m 28,16 4,4 9,-9 -4,-4 z"
+         id="path17"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         d="M 28.5,19.5 38,10"
+         id="path18"
+         sodipodi:nodetypes="cc" />
+      <path
+         id="path19"
+         style="fill:#ffffff;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
+         d="M 34.537057,5.1562725 A 6.3569999,3 45 0 0 33.38276,5.6250221 l -0.5,0.5000001 a 6.3574934,3 45 0 0 2.375001,6.6171878 6.3574934,3 45 0 0 6.609375,2.380859 l 0.01564,0.01366 0.500014,-0.498033 -0.01561,-0.01759 a 6.3569999,3 45 0 0 0.0059,-0.0059 A 6.3569999,3 45 0 0 40,8 6.3569999,3 45 0 0 34.537109,5.1562506 Z" />
+      <path
+         id="path21"
+         style="stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
+         transform="rotate(45)"
+         d="M 39.597977,0 A 5.6568527,1.4142135 0 0 1 33.941124,1.4142135 5.6568527,1.4142135 0 0 1 28.284271,0 5.6568527,1.4142135 0 0 1 33.941124,-1.4142135 5.6568527,1.4142135 0 0 1 39.597977,0 Z" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         d="m 24,20 -2,2 4,4 2,-2 z"
+         id="path22" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         d="m 26,22 -2,2"
+         id="path23" />
+    </g>
+  </g>
+</svg>

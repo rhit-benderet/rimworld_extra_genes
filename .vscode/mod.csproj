@@ -38,8 +38,5 @@
 		<Reference Include="../../../../../../steamapps/workshop/content/294100/3736576229/Assemblies/PhoenixRebirth.dll">
 			<Private>False</Private>
 		</Reference>
-		<Compile Update="..\1.6\Source\ThingDefs\PhoenixLordsHistoryEventDefs.cs">
-		  <Link>ThingDefs\PhoenixLordsHistoryEventDefs.cs</Link>
-		</Compile>
 	</ItemGroup>
 </Project>
