@@ -1,0 +1,80 @@
+﻿<Defs>
+    <ThingDef ParentName="MoteBase">
+        <defName>OOPhoenixLords_Mote_GraserInfernoBeamBase</defName>
+        <thingClass>MoteDualAttached</thingClass>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <mote>
+            <fadeInTime>0.2</fadeInTime>
+            <fadeOutTime>0.3</fadeOutTime>
+            <solidTime>999999</solidTime>
+            <needsMaintenance>True</needsMaintenance>
+            <rotateTowardsTarget>True</rotateTowardsTarget>
+            <scaleToConnectTargets>True</scaleToConnectTargets>
+            <fadeOutUnmaintained>True</fadeOutUnmaintained>
+        </mote>
+        <drawOffscreen>true</drawOffscreen>
+        <graphicData>
+            <texPath>Things/Mote/GraserBeam</texPath>
+            <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+            <shaderType>MoteBeam</shaderType>
+            <shaderParameters>
+                <_ExtraTexA>/Things/Mote/BeamSecondaryNoise_A</_ExtraTexA>
+                <_ExtraTexB>/Things/Mote/BeamSecondaryNoise_B</_ExtraTexB>
+                <_ScrollSpeedA>-4 </_ScrollSpeedA>
+                <_ScrollSpeedB>3</_ScrollSpeedB>
+                <_Intensity>2</_Intensity>
+            </shaderParameters>
+            <color>(0.965, 0.588, 0.055, 1.0)</color>
+        </graphicData>
+    </ThingDef>
+    <EffecterDef>
+        <defName>OOPhoenixLords_GraserInfernoBeam_End</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <fleckDef>Smoke</fleckDef>
+                <chancePerTick>0.4</chancePerTick>
+                <scale>0.6~1.1</scale>
+                <spawnLocType>OnSource</spawnLocType>
+                <absoluteAngle>true</absoluteAngle>
+                <angle>30~70</angle>
+                <speed>0.2~0.35</speed>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <positionRadius>0.1</positionRadius>
+                <moteDef>Mote_SparkThrownFast</moteDef>
+                <spawnLocType>OnSource</spawnLocType>
+                <chancePerTick>0.9</chancePerTick>
+                <speed>3.3~5</speed>
+                <scale>0.1~0.2</scale>
+                <angle>88~104</angle>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <positionRadius>0.1</positionRadius>
+                <spawnLocType>OnSource</spawnLocType>
+                <fleckDef>Beam_Glow</fleckDef>
+                <chancePerTick>0.5</chancePerTick>
+                <scale>0.8</scale>
+                <color>(255, 205, 6, 255)</color>
+            </li>
+        </children>
+    </EffecterDef>
+    <FleckDef ParentName="FleckBase_Thrown">
+        <defName>OOPhoenixLords_Fleck_InfernoBeamSpark</defName>
+        <fadeInTime>0.03</fadeInTime>
+        <solidTime>0.1</solidTime>
+        <fadeOutTime>0.5</fadeOutTime>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <graphicData>
+            <texPath>Things/Mote/SparkThrownBlue</texPath>
+            <shaderType>MoteGlow</shaderType>
+            <drawSize>0.08</drawSize>
+            <color>(0.965, 0.588, 0.055, 1.0)</color>
+        </graphicData>
+        <acceleration>(0, 0, 0.5)</acceleration>
+        <speedPerTime>0.2~0.5</speedPerTime>
+    </FleckDef>
+</Defs>

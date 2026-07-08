@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "40B7RmCXnz8=",
+  "dgSpecHash": "TLJ7lkfUlcc=",
   "success": true,
   "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\rimworld_phoenix_lords\\.vscode\\mod.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\EricBender\\.nuget\\packages\\krafs.publicizer\\2.3.0\\krafs.publicizer.2.3.0.nupkg.sha512",
     "C:\\Users\\EricBender\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
     "C:\\Users\\EricBender\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.3\\microsoft.netframework.referenceassemblies.net472.1.0.3.nupkg.sha512"
   ],

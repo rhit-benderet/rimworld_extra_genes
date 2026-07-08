@@ -1,0 +1,86 @@
+﻿<Defs>
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>OOPhoenixLords_Gun_InfernoBeamer</defName>
+        <label>inferno beamer</label>
+        <description>A weapon that concentrates the flames of a phoenix lord into a single high-powered beam.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/InfernoBeamer</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>Transparent</shaderType>
+        </graphicData>
+        <tradeability>Sellable</tradeability>
+        <relicChance>0</relicChance>
+        <smeltable>false</smeltable>
+        <costList>
+            <Steel>120</Steel>
+            <ComponentIndustrial>8</ComponentIndustrial>
+            <OOPhoenixLords_PhoenixCore>1</OOPhoenixLords_PhoenixCore>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>Machining</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <displayPriority>420</displayPriority>
+        </recipeMaker>
+        <statBases>
+            <WorkToMake>47000</WorkToMake>
+            <Mass>6</Mass>
+            <AccuracyTouch>0.60</AccuracyTouch>
+            <AccuracyShort>0.70</AccuracyShort>
+            <AccuracyMedium>0.65</AccuracyMedium>
+            <AccuracyLong>0.55</AccuracyLong>
+            <RangedWeapon_Cooldown>1.70</RangedWeapon_Cooldown>
+        </statBases>
+        <techLevel>Spacer</techLevel>
+        <verbs>
+            <li>
+                <verbClass>OOPhoenixLords.Verb_ShootInfernoBeam</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <warmupTime>1.0</warmupTime>
+                <range>17.9</range>
+                <burstShotCount>3</burstShotCount>
+                <showBurstShotStats>false</showBurstShotStats>
+                <beamWidth>6</beamWidth>
+                <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+                <beamDamageDef>Burn</beamDamageDef>
+                <beamTotalDamage>40</beamTotalDamage>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+                <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
+                <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+                <beamMaxDeviation>1.5</beamMaxDeviation>
+                <beamCurvature>0.6</beamCurvature>
+                <beamMoteDef>OOPhoenixLords_Mote_GraserInfernoBeamBase</beamMoteDef>
+                <beamEndEffecterDef>OOPhoenixLords_GraserInfernoBeam_End</beamEndEffecterDef>
+                <beamChanceToStartFire>0.85</beamChanceToStartFire>
+                <beamChanceToAttachFire>0.85</beamChanceToAttachFire>
+                <beamFireSizeRange>0.55~0.85</beamFireSizeRange>
+                <beamLineFleckDef>OOPhoenixLords_Fleck_InfernoBeamSpark</beamLineFleckDef>
+                <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+                <beamStartOffset>0.8</beamStartOffset>
+                <beamLineFleckChanceCurve>
+                    <points>
+                        <li>(0, 0)</li>
+                        <li>(0.65, 0.4)</li>
+                        <li>(1, 0.75)</li>
+                    </points>
+                </beamLineFleckChanceCurve>
+            </li>
+        </verbs>
+        <weaponTags>
+            <li>PhoenixGun</li>
+        </weaponTags>
+        <tools>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+</Defs>

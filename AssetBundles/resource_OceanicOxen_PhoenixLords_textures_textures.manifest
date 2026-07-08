@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 1648343881
+CRC: 1769022081
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3b6667be8684058822a38a42acefbfb1
+    Hash: c2dc97a9ab1f0d4bea9dd103b8915e70
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2612ac43db082a73502ee80f2eceb73f
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 3b6667be8684058822a38a42acefbfb1
+    Hash: c2dc97a9ab1f0d4bea9dd103b8915e70
 HashAppended: 0
 ClassTypes:
 - Class: 28
@@ -27,8 +27,11 @@ Assets:
 - Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Hulk_south.png
 - Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Item/Manufactured/PhoenixBloodSyringe.png
 - Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Abilities/OverchargedPhoenixFlight.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/PantsPhoenix/PantsPhoenix.png
 - Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Icons/Genes/Gene_PhoenixFire.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Item/Resource/PhoenixCore.png
 - Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Icons/Genes/Gene_PhoenixFlight.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Item/Equipment/WeaponRanged/InfernoBeamer.png
 - Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Hulk_north.png
 - Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Icons/Genes/Gene_PhoenixFireSpew.png
 - Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Abilities/PhoenixFlight.png

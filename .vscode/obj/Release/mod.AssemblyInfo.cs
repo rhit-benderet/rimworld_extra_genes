@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: System.Runtime.CompilerServices.IgnoresAccessChecksToAttribute("Assembly-CSharp")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("PhoenixLords")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0.0+beaa7e5025f91a565d07a5a8ace85e04a58bad66")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0.0+e3ed5e1e15039a669ebddc77cee1782042ad74e5")]
 [assembly: System.Reflection.AssemblyProductAttribute("PhoenixLords")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PhoenixLords")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.1.0.0")]

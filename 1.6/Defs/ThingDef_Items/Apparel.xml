@@ -29,7 +29,7 @@
             <ArmorRating_Blunt>0.072</ArmorRating_Blunt>
             <ArmorRating_Heat>1.2</ArmorRating_Heat>
             <Insulation_Cold>4.4</Insulation_Cold>
-            <Insulation_Heat>10.2</Insulation_Heat>
+            <Insulation_Heat>6.2</Insulation_Heat>
             <EquipDelay>1.5</EquipDelay>
         </statBases>
         <apparel>
@@ -38,6 +38,57 @@
                 <li>Shoulders</li>
             </bodyPartGroups>
             <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix</wornGraphicPath>
+            <layers>
+                <li>OnSkin</li>
+            </layers>
+            <tags>
+                <li>IndustrialBasic</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Worker</li>
+                <li>Soldier</li>
+                <li>Spacefarer</li>
+            </defaultOutfitTags>
+            <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+        </apparel>
+        <tradeTags>
+            <li>BasicClothing</li>
+        </tradeTags>
+    </ThingDef>
+    <ThingDef ParentName="ApparelMakeableBase">
+        <defName>OOPhoenixLords_Apparel_PhoenixPants</defName>
+        <label>phoenix pants</label>
+        <description>A pair of pants that can withstand large amounts of heat. Although originally developed for use in battle against phoenix lords, it sees most of its use on phoenix lords as it can withstand their large body temperature.</description>
+        <recipeMaker>
+            <researchPrerequisite>ComplexClothing</researchPrerequisite>
+            <displayPriority>265</displayPriority>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/PantsPhoenix/PantsPhoenix</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <thingCategories>
+            <li>ApparelMisc</li>
+        </thingCategories>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToMake>1600</WorkToMake>
+            <Mass>0.25</Mass>
+            <ArmorRating_Sharp>0.28</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.072</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+            <Insulation_Cold>4.0</Insulation_Cold>
+            <Insulation_Heat>6.2</Insulation_Heat>
+            <EquipDelay>2</EquipDelay>
+        </statBases>
+        <costList>
+            <DevilstrandCloth>60</DevilstrandCloth>
+            <Chemfuel>30</Chemfuel>
+        </costList>
+        <apparel>
+            <bodyPartGroups>
+                <li>Legs</li>
+            </bodyPartGroups>
             <layers>
                 <li>OnSkin</li>
             </layers>

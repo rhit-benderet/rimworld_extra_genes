@@ -3,7 +3,6 @@ unity_version = "2022.3.35f1"
 bundle_name = "OceanicOxen.PhoenixLords"
 asset_directory = "Source/Assets"
 output_directory = "AssetBundles/"
-exclude_patterns = ["*.shader","Defs/*"]
 link_method = "junction"  # or "copy", "symlink", "hardlink"
 
 # Note, if you are creating multiple assetbundles for a single mod, they need to have unique bundle_name's
@@ -13,3 +12,10 @@ bundle_name = "OceanicOxen.PhoenixLords_textures"
 filename = "resource_[bundle_name]_textures_[target]"
 exclude_patterns = ["*.shader","Defs/*"]
 targetless = true  # No platform suffix - creates single bundle for all platforms
+
+[bundles.shaders] # specify `--target windows` (or mac or linux) when running assetbundlebuilder to build for each platform
+bundle_path = "OceanicOxen.PhoenixLords"
+bundle_name = "OceanicOxen.PhoenixLords_shaders"
+filename = "resource_[bundle_name]_shaders_[target]"
+include_patterns = ["*.shader"]
+targetless = false  # Platform-specific - creates separate bundle per platform

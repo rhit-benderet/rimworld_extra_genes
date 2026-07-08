@@ -1,0 +1,61 @@
+﻿<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>OOPhoenixLords_PhoenixCore</defName>
+        <label>phoenix core</label>
+        <description>A core able to mimic the fire generating properties of a phoenix lord.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/PhoenixCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>Transparent</shaderType>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <tradeability>Sellable</tradeability>
+        <stackLimit>10</stackLimit>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <tickerType>Normal</tickerType>
+        <statBases>
+            <MaxHitPoints>70</MaxHitPoints>
+            <MarketValue>1000</MarketValue>
+            <Mass>4.6</Mass>
+            <Flammability>3.0</Flammability>
+        </statBases>
+        <intricate>true</intricate>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+        <costList>
+            <Steel>100</Steel>
+            <OOPhoenixLords_PhoenixBloodSyringe>5</OOPhoenixLords_PhoenixBloodSyringe>
+            <Chemfuel>50</Chemfuel>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>Machining</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>4</Crafting>
+            </skillRequirements>
+            <displayPriority>420</displayPriority>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+        </recipeMaker>
+        <allowedArchonexusCount>5</allowedArchonexusCount>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>3.1</explosiveRadius>
+                <explosiveDamageType>Flame</explosiveDamageType>
+                <explosiveExpandPerStackcount>0.037</explosiveExpandPerStackcount>
+                <startWickOnDamageTaken>
+                    <li>Flame</li>
+                </startWickOnDamageTaken>
+                <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+                <preExplosionSpawnThingDef>OOPhoenixLords_Filth_SuperheatedChemfuel</preExplosionSpawnThingDef>
+                <preExplosionSpawnChance>1</preExplosionSpawnChance>
+                <wickTicks>70~150</wickTicks>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

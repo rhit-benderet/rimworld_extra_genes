@@ -15,7 +15,6 @@
 
 		<DebugSymbols>false</DebugSymbols>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-
 		<RimWorldPath Condition="'$(RimWorldPath)' == '' AND '$(OS)' == 'Windows_NT'">../../../RimWorldWin64_Data/Managed</RimWorldPath>
         <RimWorldPath Condition="'$(RimWorldPath)' == '' AND '$(OS)' != 'Windows_NT'">../../../RimWorldLinux_Data/Managed</RimWorldPath>
         <LangVersion>latest</LangVersion>
@@ -38,5 +37,16 @@
 		<Reference Include="../../../../../../steamapps/workshop/content/294100/3736576229/Assemblies/PhoenixRebirth.dll">
 			<Private>False</Private>
 		</Reference>
+		<Compile Update="..\1.6\Source\InfernoBeamer\Stance_CooldownNotBusy.cs">
+		  <Link>InfernoBeamer\Stance_CooldownNotBusy.cs</Link>
+		</Compile>
 	</ItemGroup>
+
+ 	<ItemGroup>
+ 	  <PackageReference Include="Krafs.Publicizer" Version="2.3.0">
+ 	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+ 	    <PrivateAssets>all</PrivateAssets>
+ 	  </PackageReference>
+	  <Publicize Include="Assembly-CSharp:Verse.Verb.CausesTimeSlowdown" />
+ 	</ItemGroup>
 </Project>
