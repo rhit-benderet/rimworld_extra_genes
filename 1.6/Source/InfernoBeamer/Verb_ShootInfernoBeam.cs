@@ -21,8 +21,8 @@ public class Verb_ShootInfernoBeam : Verb
 	private Effecter endEffecter;
 
 	private Sustainer sustainer;
-
-	private const int NumSubdivisionsPerUnitLength = 1;
+	
+	private int lastBurstTick;
 
 	protected override int ShotsPerBurst => base.BurstShotCount;
 
@@ -85,28 +85,6 @@ public class Verb_ShootInfernoBeam : Verb
 		return intVec.IsValid;
 	}
 
-	protected IntVec3 GetHitCell(IntVec3 source, IntVec3 targetCell)
-	{
-		TryGetHitCell(source, targetCell, out var hitCell);
-		return hitCell;
-	}
-
-	protected IEnumerable<IntVec3> GetBeamHitNeighbourCells(IntVec3 source, IntVec3 pos)
-	{
-		if (!verbProps.beamHitsNeighborCells)
-		{
-			yield break;
-		}
-		for (int i = 0; i < 4; i++)
-		{
-			IntVec3 intVec = pos + GenAdj.CardinalDirections[i];
-			if (intVec.InBounds(Caster.Map) && (!verbProps.beamHitsNeighborCellsRequiresLOS || GenSight.LineOfSight(source, intVec, caster.Map)))
-			{
-				yield return intVec;
-			}
-		}
-	}
-
 	public override bool TryStartCastOn(LocalTargetInfo castTarg, LocalTargetInfo destTarg, bool surpriseAttack = false, bool canHitNonTargetPawns = true, bool preventFriendlyFire = false, bool nonInterruptingSelfCast = false)
 	{
 		return this.BaseTryCastOn(castTarg, destTarg, surpriseAttack, canHitNonTargetPawns, preventFriendlyFire, nonInterruptingSelfCast);
@@ -139,6 +117,16 @@ public class Verb_ShootInfernoBeam : Verb
 		currentDestination = destTarg;
 		if (state != VerbState.Bursting)
 		{
+			int currentTick = Find.TickManager.TicksGame;
+			if (currentTick <= this.lastBurstTick + 22)
+			{
+				if (verbTracker.directOwner is Ability ability)
+				{
+					ability.lastCastTick = Find.TickManager.TicksGame;
+				}
+				WarmupComplete();
+				return true;
+			}
 			if (CasterIsPawn && WarmupTime > 0f)
 			{
 				if (!TryFindShootLineFromTo(caster.Position, castTarg, out var resultingLine))
@@ -171,6 +159,11 @@ public class Verb_ShootInfernoBeam : Verb
 	
 	public override void BurstingTick()
 	{
+		this.lastBurstTick = Find.TickManager.TicksGame;
+		if (this.burstShotsLeft == 0)
+		{
+			this.CasterPawn.stances.SetStance(new Stance_Mobile());
+		}
 		Vector3 vector = InterpolatedPosition;
 		IntVec3 intVec = vector.ToIntVec3();
 		Vector3 vector2 = InterpolatedPosition - caster.Position.ToVector3Shifted();
@@ -212,10 +205,17 @@ public class Verb_ShootInfernoBeam : Verb
 			}
 		}
 		sustainer?.Maintain();
-		if (this.burstShotsLeft == 0)
-		{
-			this.WarmupComplete();
-		}
+		// if (this.ticksToNextBurstShot == this.TicksBetweenBurstShots)
+		// {
+		// 	this.CasterPawn.stances.SetStance((Stance) new Stance_Cooldown(this.TicksBetweenBurstShots + 1, this.currentTarget, this));
+		// }
+		
+	}
+
+	public override void ExposeData()
+	{
+		base.ExposeData();
+		Scribe_Values.Look(ref lastBurstTick, "lastBurstTick");
 	}
 
 	public override void WarmupComplete()

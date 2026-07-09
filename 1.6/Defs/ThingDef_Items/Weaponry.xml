@@ -57,7 +57,7 @@
                 <beamChanceToAttachFire>0.85</beamChanceToAttachFire>
                 <beamFireSizeRange>0.55~0.85</beamFireSizeRange>
                 <beamLineFleckDef>OOPhoenixLords_Fleck_InfernoBeamSpark</beamLineFleckDef>
-                <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+                <nonInterruptingSelfCast>false</nonInterruptingSelfCast>
                 <beamStartOffset>0.8</beamStartOffset>
                 <beamLineFleckChanceCurve>
                     <points>
