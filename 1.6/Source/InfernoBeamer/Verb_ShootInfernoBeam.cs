@@ -118,7 +118,7 @@ public class Verb_ShootInfernoBeam : Verb
 		if (state != VerbState.Bursting)
 		{
 			int currentTick = Find.TickManager.TicksGame;
-			if (currentTick <= this.lastBurstTick + 22)
+			if (currentTick <= this.lastBurstTick + this.TicksBetweenBurstShots)
 			{
 				if (verbTracker.directOwner is Ability ability)
 				{
