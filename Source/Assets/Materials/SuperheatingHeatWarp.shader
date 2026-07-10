@@ -4,7 +4,8 @@
     {
         _MainTex ("Texture", 2D) = "white" {}
         _Color ("Color", Color) = (1,1,1,1)
-        _ColorHeatAccent ("ColorHeatAccent", Color) = (1,1,1,1)
+        _ColorHeatAccentStart ("ColorHeatAccentStart", Color) = (1,1,1,1)
+        _ColorHeatAccentEnd ("ColorHeatAccentEnd", Color) = (1,1,1,1)
         _Intensity ("Intensity", Range(-1,1)) = 0.1
         _XWidthFactor ("XWidthFactor", Float) = 1
         _MaxHeatAccent ("MaxHeatAccent", Float) = 0.2
@@ -58,7 +59,8 @@
             sampler2D _MainTex;
             float4 _MainTex_ST;
             float4 _Color;
-            float4 _ColorHeatAccent;
+            float4 _ColorHeatAccentStart;
+            float4 _ColorHeatAccentEnd;
             float _Intensity;
             float _XWidthFactor;
             float _AgeSecs;
@@ -147,7 +149,10 @@
                 
                 
                 fixed4 bg_color = tex2D(_GrabTexture, screen_uv + offset);
-                float3 saturated_color = _ColorHeatAccent.rgb;
+                float3 saturated_color_start = _ColorHeatAccentStart.rgb;
+                float3 saturated_color_end = _ColorHeatAccentEnd.rgb;
+                float truelen = 2 * length(unnorm_in_unscaled);
+                float3 saturated_color = lerp(saturated_color_start, saturated_color_end, min(truelen * truelen, 1));
                 return float4(lerp(bg_color, saturated_color, 1 - alpha), 1);
             }
             ENDHLSL

@@ -31,7 +31,8 @@
                 <_HeatAccentFalloff>64</_HeatAccentFalloff>
                 <_PulseTime>15</_PulseTime>
                 <_RingCount>3</_RingCount>
-                <_ColorHeatAccent>(0.745, 0.063, 0.075, 1.0)</_ColorHeatAccent>
+                <_ColorHeatAccentStart>(0.745, 0.063, 0.075, 1.0)</_ColorHeatAccentStart>
+                <_ColorHeatAccentEnd>(1.0, 0.8039, 0.0235, 1.0)</_ColorHeatAccentEnd>
             </shaderParameters>
         </graphicData>
     </ThingDef>
