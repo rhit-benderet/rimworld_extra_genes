@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   sodipodi:docname="PhoenixCore.svg"
+   inkscape:export-filename="..\Source\Assets\Textures\Things\Item\Resource\PhoenixCore.png"
+   inkscape:export-xdpi="256"
+   inkscape:export-ydpi="256"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="16"
+     inkscape:cx="14.78125"
+     inkscape:cy="30.03125"
+     inkscape:window-width="2560"
+     inkscape:window-height="1494"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g11"
+     showguides="false">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#000000"
+       empopacity="0.8627451"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="8"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <filter
+       height="2.95"
+       width="2.95"
+       y="-0.975"
+       x="-0.975"
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Blur"
+       id="filter18">
+      <feGaussianBlur
+         stdDeviation="0.5 0.5"
+         result="blur"
+         id="feGaussianBlur18" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 50 0 "
+         result="colormatrix"
+         id="feColorMatrix18" />
+      <feComposite
+         in="colormatrix"
+         in2="SourceGraphic"
+         operator="in"
+         id="feComposite18" />
+    </filter>
+    <filter
+       height="1.15"
+       width="1.124448"
+       y="-0.074999991"
+       x="-0.062224023"
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter20">
+      <feGaussianBlur
+         stdDeviation="0.5 0.5"
+         result="blur"
+         id="feGaussianBlur20" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 50 0 "
+         result="colormatrix"
+         id="feColorMatrix20" />
+      <feComposite
+         in="colormatrix"
+         in2="SourceGraphic"
+         operator="in"
+         id="feComposite20" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter11"
+       x="-1.275"
+       y="-1.275"
+       width="3.55"
+       height="3.55">
+      <feGaussianBlur
+         stdDeviation="0.25 0.25"
+         result="blur"
+         id="feGaussianBlur11" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g11"
+       inkscape:label="PhoenixCore"
+       transform="matrix(5,0,0,5,-41,-96)">
+      <path
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:100;stroke-dasharray:none;stroke-opacity:1"
+         d="m 13,21 c 0.8,3 0,6 0,6"
+         id="path12"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:100;stroke-dasharray:none;stroke-opacity:1"
+         d="m 10,24 c 3,-1.2 6.001245,0.111097 6,0"
+         id="path13"
+         sodipodi:nodetypes="cc" />
+      <g
+         id="g10"
+         inkscape:label="PhoenixCoreFire"
+         style="filter:url(#filter11)">
+        <circle
+           style="display:inline;fill:none;fill-opacity:1;stroke:#d23008;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:100;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter18)"
+           id="path9"
+           cx="13"
+           cy="24"
+           inkscape:label="PhoenixCore"
+           r="1" />
+        <circle
+           style="display:inline;fill:#ffcd06;fill-opacity:1;stroke:none;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:100;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter18)"
+           id="circle10"
+           cx="13"
+           cy="24"
+           inkscape:label="PhoenixCore"
+           r="1" />
+      </g>
+      <path
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:100;stroke-dasharray:none;stroke-opacity:1"
+         d="m 10,24 c 3,1.2 6.012322,-0.105345 6,0"
+         id="path14"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:100;stroke-dasharray:none;stroke-opacity:1"
+         d="m 13,21 c -1.2,3 0,6 0,6"
+         id="path11"
+         sodipodi:nodetypes="cc" />
+      <circle
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:100;stroke-dasharray:none;stroke-opacity:1"
+         id="path1"
+         cx="13"
+         cy="24"
+         r="3"
+         inkscape:label="CoreOutline" />
+    </g>
+  </g>
+</svg>

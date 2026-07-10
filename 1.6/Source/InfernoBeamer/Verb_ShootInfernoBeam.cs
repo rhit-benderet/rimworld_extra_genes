@@ -205,10 +205,6 @@ public class Verb_ShootInfernoBeam : Verb
 			}
 		}
 		sustainer?.Maintain();
-		// if (this.ticksToNextBurstShot == this.TicksBetweenBurstShots)
-		// {
-		// 	this.CasterPawn.stances.SetStance((Stance) new Stance_Cooldown(this.TicksBetweenBurstShots + 1, this.currentTarget, this));
-		// }
 		
 	}
 

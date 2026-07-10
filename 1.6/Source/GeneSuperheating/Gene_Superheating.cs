@@ -8,7 +8,8 @@ using UnityEngine;
 namespace OOPhoenixLords
 {
 	public class Gene_Superheating : Gene, IPhoenixFireSink
-    {
+	{
+		private Mote heatWarpMote;
         private Gene_PhoenixFire cachedPhoenixFireGene;
 		public float targetValue = 0.0f;
 		public float Max = 42.0f;
@@ -137,23 +138,53 @@ namespace OOPhoenixLords
 				return this.cachedHeatPerSecond + Mathf.Max(0f, this.pawn.AmbientTemperature / 1.5f);
 			}
 		}
+		public static void HeatWarp(Vector3 c, Map map, float size)
+          {
+            Vector3 loc = c;
+            if (!loc.ShouldSpawnMotesAt(map))
+              return;
+            Vector3 vector3 = loc + size * new Vector3(Rand.Value - 0.5f, 0.0f, Rand.Value - 0.5f);
+            if (!vector3.InBounds(map))
+              return;
+            FleckCreationData dataStatic = FleckMaker.GetDataStatic(vector3, map, FleckDefOf.FireGlow, Rand.Range(4f, 6f) * size) with
+            {
+              rotationRate = Rand.Range(-3f, 3f),
+              velocityAngle = (float) Rand.Range(0, 360),
+              velocitySpeed = 0.12f
+            };
+            map.flecks.CreateFleck(dataStatic);
+          }
+			
+          public override void Tick()
+          {
+	          IntVec3 intVec = this.pawn.PositionHeld;
+	          if (ShouldSuperHeat && this.PhoenixFireGene.ValueSecondary > 0)
+	          {
+		          if (heatWarpMote == null || heatWarpMote.Destroyed)
+		          {
+			          heatWarpMote = MoteMaker.MakeAttachedOverlay(this.pawn,PhoenixLordsMoteDefs.OOPhoenixLords_Mote_SuperHeatingHeatWarp, Vector3.zero);
+		          }
+		          heatWarpMote?.Maintain();
+	          }
+
+          }
         public override void TickInterval(int delta)
 		{
 			base.TickInterval(delta);
 			float heatPerSecond = this.HeatPerSecond;
 			bool canHeat = this.CanActuallyHeat;
-			if (this.ShouldSuperHeat && this.PhoenixFireGene.ValueSecondary > 0)
-			{
-				if (this.pawn.IsHashIntervalTick(250, delta))
-				{
-					int flameAmount = Rand.Range(15, 30);
-					for (int i = 0; i < flameAmount; i++)
-					{
-						Vector3 c = this.pawn.DrawPos + new Vector3(Mathf.Cos(2*Mathf.PI*i/flameAmount) + Rand.Range(-0.2f, 0.2f), 0f, Mathf.Sin(2*Mathf.PI*i/flameAmount) + Rand.Range(-0.2f, 0.2f));
-						FleckMaker.ThrowFireGlow(c, this.pawn.Map, Rand.Range(Mathf.Min(0.1f + this.HeatPerSecond / 400f, 0.3f), Mathf.Min(0.15f + this.HeatPerSecond / 400f, 0.45f)));
-					}
-				}
-			}
+			// if (this.ShouldSuperHeat && this.PhoenixFireGene.ValueSecondary > 0)
+			// {
+			// 	if (this.pawn.IsHashIntervalTick(250, delta))
+			// 	{
+			// 		int flameAmount = Rand.Range(15, 30);
+			// 		for (int i = 0; i < flameAmount; i++)
+			// 		{
+			// 			Vector3 c = this.pawn.DrawPos + new Vector3(Mathf.Cos(2*Mathf.PI*i/flameAmount) + Rand.Range(-0.2f, 0.2f), 0f, Mathf.Sin(2*Mathf.PI*i/flameAmount) + Rand.Range(-0.2f, 0.2f));
+			// 			FleckMaker.ThrowFireGlow(c, this.pawn.Map, Rand.Range(Mathf.Min(0.1f + this.HeatPerSecond / 400f, 0.3f), Mathf.Min(0.15f + this.HeatPerSecond / 400f, 0.45f)));
+			// 		}
+			// 	}
+			// }
 			if (canHeat)
 			{
 				GenTemperature.PushHeat(this.pawn.PositionHeld, this.pawn.MapHeld, heatPerSecond * delta / 60f);

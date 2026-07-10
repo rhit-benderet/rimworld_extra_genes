@@ -37,8 +37,8 @@
 		<Reference Include="../../../../../../steamapps/workshop/content/294100/3736576229/Assemblies/PhoenixRebirth.dll">
 			<Private>False</Private>
 		</Reference>
-		<Compile Update="..\1.6\Source\InfernoBeamer\Stance_CooldownNotBusy.cs">
-		  <Link>InfernoBeamer\Stance_CooldownNotBusy.cs</Link>
+		<Compile Update="..\1.6\Source\ThingDefs\PhoenixLordsEffecterDefs.cs">
+		  <Link>ThingDefs\PhoenixLordsEffectorDefs.cs</Link>
 		</Compile>
 	</ItemGroup>
 

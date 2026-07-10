@@ -1,0 +1,38 @@
+﻿<Defs>
+    <ShaderTypeDef>
+        <defName>OOPhoenixLords_SuperHeatingHeatWarp</defName>
+        <shaderPath>SuperheatingHeatWarp</shaderPath>
+    </ShaderTypeDef>
+    <ThingDef ParentName="MoteBase">
+        <defName>OOPhoenixLords_Mote_SuperHeatingHeatWarp</defName>
+        <thingClass>MoteAttached</thingClass>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <mote>
+            <fadeInTime>0.2</fadeInTime>
+            <fadeOutTime>0.3</fadeOutTime>
+            <solidTime>999999</solidTime>
+            <needsMaintenance>True</needsMaintenance>
+            <rotateTowardsTarget>True</rotateTowardsTarget>
+            <scaleToConnectTargets>True</scaleToConnectTargets>
+            <fadeOutUnmaintained>True</fadeOutUnmaintained>
+        </mote>
+        <drawOffscreen>true</drawOffscreen>
+        <graphicData>
+            <texPath>Things/Mote/HeatWarpMask</texPath>
+            <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+            <drawSize>3</drawSize>
+            <shaderType>OOPhoenixLords_SuperHeatingHeatWarp</shaderType>
+            <shaderParameters>
+                <_Intensity>0.03</_Intensity>
+                <_XWidthFactor>0.65</_XWidthFactor>
+                <_RingMaxDistance>0.9</_RingMaxDistance>
+                <_MaxHeatAccent>0.7</_MaxHeatAccent>
+                <_HeatAccentVolatility>5</_HeatAccentVolatility>
+                <_HeatAccentFalloff>64</_HeatAccentFalloff>
+                <_PulseTime>15</_PulseTime>
+                <_RingCount>3</_RingCount>
+                <_ColorHeatAccent>(0.745, 0.063, 0.075, 1.0)</_ColorHeatAccent>
+            </shaderParameters>
+        </graphicData>
+    </ThingDef>
+</Defs>

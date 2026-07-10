@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 1769022081
+CRC: 422695535
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c2dc97a9ab1f0d4bea9dd103b8915e70
+    Hash: 6cd6a827c3c7d00fb113a3b14ab67020
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2612ac43db082a73502ee80f2eceb73f
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: c2dc97a9ab1f0d4bea9dd103b8915e70
+    Hash: 6cd6a827c3c7d00fb113a3b14ab67020
 HashAppended: 0
 ClassTypes:
 - Class: 28
@@ -46,6 +46,7 @@ Assets:
 - Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Thin_south.png
 - Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix_Thin_east.png
 - Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Pawn/Humanlike/Apparel/ShirtPhoenix/ShirtPhoenix.png
+- Assets/Data/OceanicOxen.PhoenixLords/Textures/Things/Mote/HeatWarpMask.png
 - Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Abilities/InflictBurningAlive.png
 - Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Icons/Genes/Gene_PhoenixFireBurst.png
 - Assets/Data/OceanicOxen.PhoenixLords/Textures/UI/Icons/Genes/Gene_Superheating.png
