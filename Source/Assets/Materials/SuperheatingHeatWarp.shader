@@ -128,11 +128,15 @@
                 float alpha = 1.0;
                 for (int i = 0; i < _RingCount; i++)
                 {
-                    float t_ring = fmod(_AgeSecs + i * _PulseTime / _RingCount, _PulseTime);
-                    float d = (_RingMaxDistance + (r * _Intensity * _HeatAccentVolatility)) * t_ring / _PulseTime - (2 * length(unnorm_in_unscaled));
-                    float length_factor = max(1.0- (_HeatAccentFalloff * (d * d)), 0);
-                    float true_alpha = _MaxHeatAccent * _Color.a * length_factor * (1 - t_ring / _PulseTime);
-                    alpha = alpha * (1-true_alpha);
+                    float t_before = _AgeSecs - i * _PulseTime / _RingCount;
+                    if (t_before >= 0)
+                    {
+                        float t_ring = fmod(t_before, _PulseTime);
+                        float d = (_RingMaxDistance + (r * _Intensity * _HeatAccentVolatility)) * t_ring / _PulseTime - (2 * length(unnorm_in_unscaled));
+                        float length_factor = max(1.0- (_HeatAccentFalloff * (d * d)), 0);
+                        float true_alpha = _MaxHeatAccent * _Color.a * length_factor * (1 - t_ring / _PulseTime);
+                        alpha = alpha * (1-true_alpha);
+                    }
                 }
                 
                 
