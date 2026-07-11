@@ -173,18 +173,6 @@ namespace OOPhoenixLords
 			base.TickInterval(delta);
 			float heatPerSecond = this.HeatPerSecond;
 			bool canHeat = this.CanActuallyHeat;
-			// if (this.ShouldSuperHeat && this.PhoenixFireGene.ValueSecondary > 0)
-			// {
-			// 	if (this.pawn.IsHashIntervalTick(250, delta))
-			// 	{
-			// 		int flameAmount = Rand.Range(15, 30);
-			// 		for (int i = 0; i < flameAmount; i++)
-			// 		{
-			// 			Vector3 c = this.pawn.DrawPos + new Vector3(Mathf.Cos(2*Mathf.PI*i/flameAmount) + Rand.Range(-0.2f, 0.2f), 0f, Mathf.Sin(2*Mathf.PI*i/flameAmount) + Rand.Range(-0.2f, 0.2f));
-			// 			FleckMaker.ThrowFireGlow(c, this.pawn.Map, Rand.Range(Mathf.Min(0.1f + this.HeatPerSecond / 400f, 0.3f), Mathf.Min(0.15f + this.HeatPerSecond / 400f, 0.45f)));
-			// 		}
-			// 	}
-			// }
 			if (canHeat)
 			{
 				GenTemperature.PushHeat(this.pawn.PositionHeld, this.pawn.MapHeld, heatPerSecond * delta / 60f);
